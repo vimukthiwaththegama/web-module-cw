@@ -1,0 +1,10 @@
+.navbar ul li {
+    display: contents;
+    margin: 0 15px;
+}
+body{
+    background-color: rgb(83, 153, 83);
+}
+.header{
+    text-align: center;
+}
