@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
 body{
-    background-color: #68bb62;
+    background-color: #6ad182;
 }
 .navbar {
-    background-color: #275c23;
-    color: white;
+    background-color: #28A745;
+    color: #343A40;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,15 +28,25 @@ body{
 }
 
 .navbar ul li {
-    margin-left: 20px;
+    margin-left: 40px;
     font-size: 18px;
-    font-weight: bold;
-    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #343A40;
     cursor: pointer;
+    padding: auto;
+
 }
 
-.navbar ul li:hover {
-    color: #73ff49;
+.navbar a:hover {
+    color: #ffffff;   
+    text-decoration: underline; 
+}
+header{
+    cursor: pointer;
+}
+a{
+    color: #343A40;
+    text-decoration: none;
 }
 
 
