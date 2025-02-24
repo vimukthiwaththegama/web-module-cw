@@ -60,7 +60,7 @@ h3{
 .member-details {
     position:static;
     bottom: -100%;
-    background-color: rgba(98, 102, 99, 0.5);
+    background-color: rgba(67, 156, 67, 0.87);
     color: rgb(0, 0, 0);
     padding: 10px;
     border-radius: 0 0 5px 5px;
@@ -82,3 +82,31 @@ h3{
 .thumbnail:focus {
     outline: 2px solid #851524;
 }
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Section Styling */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background: #A5D6A7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+
+
