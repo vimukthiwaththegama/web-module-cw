@@ -1,0 +1,75 @@
+.page-editor-container{
+    background-color: rgb(163, 240, 157);
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    
+}
+
+.page-editor-arrow-container{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 30px;
+
+}
+
+.page-editor-content-right1 img, .page-editor1-content-left2 img{
+    width: 500px;
+}
+
+.page-editor-content{
+    font-weight: 300;
+    display: flex;
+    margin: 0px 70px 70px 70px;
+}
+
+.page-editor-title{
+    color: rgb(2, 11, 12);
+    text-decoration: underline;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 200;
+    font-family: Arial,
+}
+
+.page-editor-title-description{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#page-editor-content1{
+    margin-top: 80px;
+
+}
+
+.page-editor-content-left1-title, .page-editor1-content-right2-title{
+    color: rgb(93, 95, 95);
+    font-size: 35px;
+    font-weight: 200;
+}
+
+.page-editor-content-left1{
+    padding-right: 100px;
+}
+
+.page-editor-content-right2{
+    padding-left: 100px;
+}
+
+.page-editor-link a{
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(235, 181, 65);
+    text-decoration: none;
+}
+
+.page-editor-link{
+    margin-top: 30px;
+}
+
+.page-editor-link a:hover{
+    background-color: rgb(42, 42, 42);
+    transition: all 0.3s;
+}
