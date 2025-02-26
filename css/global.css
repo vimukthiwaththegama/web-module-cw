@@ -1,23 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
-body{
-    background-color: #68bb62;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    background-color: #bebcbc;
+}
+
 .navbar {
-    background-color: #275c23;
+    background-color: #008080;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    border-radius: 8px;
+    border-bottom-color: antiquewhite;
+    border: 0px;
 }
 
 .navbar h1 {
     font-size: 24px;
     margin: 0;
     padding-left: 10px;
-    font-family: 'Poppins', sans-serif;  
+    font-family: 'Poppins', sans-serif;
+    
 }
 
 .navbar ul {
@@ -38,16 +47,39 @@ body{
 }
 
 .navbar a:hover {
-    color: #73ff49;   
-    text-decoration: underline; 
+    color: #333333;
+    text-decoration: underline;
 
 }
-header{
+
+header {
     cursor: pointer;
 }
-a{
+
+a {
     color: white;
     text-decoration: none;
 }
 
+.brand {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+}
 
+.brand h1 {
+    font-size: 2.5rem;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+}
+
+.brand h2 {
+    font-size: 2.2rem;
+    color: #333333;
+    font-family: 'Poppins', serif;
+    margin: 0;
+}
+.brand h2:hover{
+    color: black;
+}
