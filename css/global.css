@@ -7,11 +7,13 @@
 }
 
 body {
-    background-color: #bebcbc;
+    background-color: #b5c5e9;
+    
+
 }
 
 .navbar {
-    background-color: #008080;
+    background-color: #007070;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -82,4 +84,19 @@ a {
 }
 .brand h2:hover{
     color: black;
+}
+footer {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    bottom: 0;
+    background-color: #007070;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-text{
+    padding-top: 30px;
 }

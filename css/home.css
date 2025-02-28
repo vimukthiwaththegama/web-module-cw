@@ -4,12 +4,21 @@
     align-self: auto;
     padding: 30px;
     position:relative;
-    top:50px;
-    left: 150px;
+    top:80px;
+    left: 80px;
     padding: 40px;
-    width: 530px; 
+    width: 600px; 
     height: auto; 
-    background-color:  #008080;
-    opacity: 40%;
-    han
+    background-color:  #007070;
+    border-radius: 40px;
+    opacity: 75%;
+}
+.home-intro:hover{
+    cursor: pointer;
+    opacity: 100%;
+    font-weight: bolder;
+    flex: 1; 
+}
+.wrapper {
+    flex: 1; 
 }
