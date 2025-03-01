@@ -1,3 +1,12 @@
+body{
+    background-image: url('/images/body1-image.jpg');
+    background-size: contain; /* Ensures the full image is visible */
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black; 
+
+}
 .home-intro{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24px;
@@ -9,7 +18,7 @@
     padding: 40px;
     width: 600px; 
     height: auto; 
-    background-color:  #007070;
+    background-color:  #FF9800;
     border-radius: 40px;
     opacity: 75%;
 }
