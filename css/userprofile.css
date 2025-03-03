@@ -1,4 +1,3 @@
-
 /* Profile Container */
 .profile-container {
     padding: 2rem 0;
@@ -29,7 +28,7 @@
     border-radius: 50%;
     overflow: hidden;
     margin-right: 2rem;
-    border: 5px solid #3db76b; /* Health green color */
+    border: 5px solid #008080; /* Updated to teal color */
 }
 
 .profile-avatar img {
@@ -43,13 +42,13 @@
 }
 
 .profile-info h2 {
-    color: #2d3748;
+    color: #333333;
     margin-bottom: 0.5rem;
     font-size: 1.8rem;
 }
 
 .profile-info .title {
-    color: #3db76b;
+    color: #008080; /* Updated to teal color */
     font-weight: 600;
     font-size: 1.2rem;
 }
@@ -62,7 +61,7 @@
 }
 
 .profile-intro h3 {
-    color: #2d3748;
+    color: #333333;
     margin-bottom: 1rem;
 }
 
@@ -85,7 +84,7 @@
 }
 
 .skills-section h3, .goals-section h3 {
-    color: #2d3748;
+    color: #333333;
     margin-bottom: 1rem;
 }
 
@@ -105,7 +104,7 @@
 
 .progress-bar {
     height: 10px;
-    background-color: #e2e8f0;
+    background-color: #bebcbc; /* Updated to match body background */
     border-radius: 5px;
     width: 80%;
     overflow: hidden;
@@ -113,7 +112,7 @@
 
 .progress {
     height: 100%;
-    background-color: #3db76b;
+    background-color: #008080; /* Updated to teal color */
     border-radius: 5px;
     transition: width 0.5s ease;
 }
@@ -121,7 +120,7 @@
 .percentage {
     width: 15%;
     text-align: right;
-    color: #3db76b;
+    color: #008080; /* Updated to teal color */
     font-weight: bold;
 }
 
@@ -132,7 +131,7 @@
 
 .goals-section dt {
     font-weight: bold;
-    color: #3db76b;
+    color: #008080; /* Updated to teal color */
     margin-top: 1rem;
 }
 
@@ -151,7 +150,7 @@
 }
 
 .volunteer-section h3 {
-    color: #2d3748;
+    color: #333333;
     margin-bottom: 1rem;
 }
 
@@ -183,7 +182,7 @@
 
 .volunteer-info strong {
     display: block;
-    color: #2d3748;
+    color: #333333;
     margin-bottom: 0.25rem;
 }
 
@@ -200,7 +199,7 @@
 }
 
 .interests-section h3 {
-    color: #2d3748;
+    color: #333333;
     margin-bottom: 1rem;
 }
 
@@ -224,7 +223,7 @@
 
 .interest-item:hover {
     transform: translateY(-5px);
-    background-color: #e6fffa;
+    background-color: rgba(0, 128, 128, 0.1); /* Teal with opacity */
 }
 
 .interest-icon {
@@ -245,7 +244,7 @@
 }
 
 .availability-section h3 {
-    color: #2d3748;
+    color: #333333;
     margin-bottom: 1rem;
 }
 
@@ -263,7 +262,7 @@
 
 .availability-table th {
     background-color: #f7fafc;
-    color: #2d3748;
+    color: #333333;
     font-weight: 600;
 }
 
@@ -277,8 +276,8 @@
 }
 
 .availability-table .available {
-    background-color: #c6f6d5;
-    color: #22543d;
+    background-color: rgba(0, 128, 128, 0.2); /* Teal with opacity */
+    color: #008080; /* Teal color */
 }
 
 
@@ -287,7 +286,7 @@
 }
 
 .contact-section h3 {
-    color: #2d3748;
+    color: #333333;
     margin-bottom: 1rem;
 }
 
@@ -319,13 +318,13 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #3db76b;
-    box-shadow: 0 0 0 3px rgba(61, 183, 107, 0.2);
+    border-color: #008080; /* Updated to teal color */
+    box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.2); /* Teal with opacity */
     outline: none;
 }
 
 .send-button {
-    background-color: #3db76b;
+    background-color: #008080; /* Updated to teal color */
     color: white;
     border: none;
     border-radius: 5px;
@@ -336,6 +335,5 @@
 }
 
 .send-button:hover {
-    background-color: #319c59;
+    background-color: #006666; /* Darker teal for hover */
 }
-
