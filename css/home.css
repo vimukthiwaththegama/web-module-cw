@@ -1,33 +1,95 @@
-body{
+body {
     background-image: url('/images/body1-image.jpg');
-    background-size: contain; /* Ensures the full image is visible */
     background-position: left;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: black; 
-
+    background-color: black;
+    background-repeat: repeat;
+    margin: 0;
 }
-.home-intro{
+
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/body1-image.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+}
+
+
+.home-intro {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 24px;
+    font-size: 30px;
+    color: #ffcf86;
     align-self: auto;
     padding: 30px;
-    position:relative;
-    top:80px;
-    left: 80px;
+    position: relative;
+    top: 120px;
+    left: 100px;
     padding: 40px;
-    width: 600px; 
-    height: auto; 
-    background-color:  #FF9800;
-    border-radius: 40px;
-    opacity: 75%;
+    width: 800px;
+    -webkit-text-stroke: 2px black; 
 }
-.home-intro:hover{
+
+.home-intro:hover {
     cursor: pointer;
     opacity: 100%;
+    font-size: 32px;
+    transform: scale(1.01);
+    transition: 0.3s;
     font-weight: bolder;
-    flex: 1; 
+    flex: 1;
 }
+.desc{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 21px;
+    width: 800px;
+    font-style: bold;
+    align-self: auto;
+    padding: 10px;
+    position: relative;
+    top: 100px;
+    left: 70px;
+    padding: 40px;
+    width: 800px;
+    color: white;
+
+}
+
 .wrapper {
-    flex: 1; 
+    flex: 1;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    gap: 50px;
+    justify-content: right;
+    flex: 1;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    background: #FF9800;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    padding: 20px;
+    opacity: 75%;
+}
+
+.card:hover {
+    cursor: pointer;
+    opacity: 100%;
+    transform: scale(1.01);
+    transition: 0.2s;
 }
