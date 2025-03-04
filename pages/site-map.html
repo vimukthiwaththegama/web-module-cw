@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Map - LifePulse</title>
+    <link rel="stylesheet" href="./../css/global.css">
+    <link rel="stylesheet" href="./../css/sitemap.css">
+    <script src="./../js/sitemap.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="navbar-container">
+            <header class="navbar">
+                <div class="brand">
+                    <h1>L</h1>
+                    <h2>ife</h2>
+                    <h1>P</h1>
+                    <h2>ulse</h2>
+                </div>
+    
+                <nav>
+                    <ul>
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./volunteer.html">Volunteer</a></li>
+                        <li><a href="./table.html">Table</a></li>
+                        <li><a href="./profile.html">User Profile</a></li>
+                        <li><a href="./feedback.html">Feedback</a></li>
+                        <li><a href="./site-map.html" class="active">Site Map</a></li>
+                        <li><a href="./team.html">Team</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <main>
+            <section class="sitemap-container">
+                <div class="sitemap-card">
+                    <div class="sitemap-header">
+                        <h2>Site Map</h2>
+                        <p class="subtitle">Interactive visual representation of LifePulse website structure</p>
+                    </div>
+                    
+                    <!-- <div class="sitemap-intro">
+                        <p>This sitemap shows how all pages in the LifePulse website are connected. Hover over any page to see details, and click on a page to navigate directly to it. You can also use keyboard navigation (Tab key) to move between elements.</p>
+                    </div> -->
+                    
+                    <div class="sitemap-svg-container" role="navigation" aria-label="Website sitemap">
+                        <svg id="sitemap" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet">
+                            <!-- Home Node -->
+                            <g class="node home-node" tabindex="0" role="link" aria-label="Home page, main landing page">
+                                <a href="./home.html">
+                                    <rect x="450" y="50" width="100" height="50" rx="10" ry="10" class="node-shape"></rect>
+                                    <text x="500" y="80" class="node-text">Home</text>
+                                </a>
+                            </g>
+                            
+                            <!-- Main Level Connector Lines -->
+                            <line x1="500" y1="100" x2="500" y2="150" class="connector"></line>
+                            
+                            <!-- Main Hub Line -->
+                            <line x1="200" y1="150" x2="800" y2="150" class="connector"></line>
+                            
+                            <!-- Level 1 Vertical Connectors -->
+                            <line x1="200" y1="150" x2="200" y2="200" class="connector"></line>
+                            <line x1="350" y1="150" x2="350" y2="200" class="connector"></line>
+                            <line x1="500" y1="150" x2="500" y2="200" class="connector"></line>
+                            <line x1="650" y1="150" x2="650" y2="200" class="connector"></line>
+                            <line x1="800" y1="150" x2="800" y2="200" class="connector"></line>
+                            
+                            <!-- Volunteer Node -->
+                            <g class="node" tabindex="0" role="link" aria-label="Volunteer page, find volunteering opportunities">
+                                <a href="./volunteer.html">
+                                    <rect x="150" y="200" width="100" height="50" rx="10" ry="10" class="node-shape"></rect>
+                                    <text x="200" y="230" class="node-text">Volunteer</text>
+                                </a>
+                            </g>
+                            
+                            <!-- User Profile Node -->
+                            <g class="node" tabindex="0" role="link" aria-label="User Profile page, personal information and settings">
+                                <a href="./profile.html">
+                                    <rect x="300" y="200" width="100" height="50" rx="10" ry="10" class="node-shape"></rect>
+                                    <text x="350" y="230" class="node-text">User Profile</text>
+                                </a>
+                            </g>
+                            
+                            <!-- Feedback Node -->
+                            <g class="node" tabindex="0" role="link" aria-label="Feedback page, submit comments and suggestions">
+                                <a href="./feedback.html">
+                                    <rect x="450" y="200" width="100" height="50" rx="10" ry="10" class="node-shape"></rect>
+                                    <text x="500" y="230" class="node-text">Feedback</text>
+                                </a>
+                            </g>
+                            
+                            <!-- Sitemap Node -->
+                            <g class="node" tabindex="0" role="link" aria-label="Site Map page, current page showing website structure">
+                                <a href="./site-map.html">
+                                    <rect x="600" y="200" width="100" height="50" rx="10" ry="10" class="node-shape active-node"></rect>
+                                    <text x="650" y="230" class="node-text">Site Map</text>
+                                </a>
+                            </g>
+                            
+                            <!-- Team Node with Subnodes -->
+                            <g class="node" tabindex="0" role="link" aria-label="Team page, information about team members">
+                                <a href="./team.html">
+                                    <rect x="750" y="200" width="100" height="50" rx="10" ry="10" class="node-shape"></rect>
+                                    <text x="800" y="230" class="node-text">Team</text>
+                                </a>
+                            </g>
+                            
+                            <!-- Team Member Subnodes -->
+                            <line x1="800" y1="250" x2="800" y2="280" class="connector"></line>
+                            <line x1="680" y1="280" x2="920" y2="280" class="connector"></line>
+                            
+                            <line x1="680" y1="280" x2="680" y2="330" class="connector"></line>
+                            <line x1="760" y1="280" x2="760" y2="330" class="connector"></line>
+                            <line x1="840" y1="280" x2="840" y2="330" class="connector"></line>
+                            <line x1="920" y1="280" x2="920" y2="330" class="connector"></line>
+                            
+                            <g class="node sub-node" tabindex="0" role="link" aria-label="Team Member 1 profile">
+                                <a href="./team-member1.html">
+                                    <rect x="640" y="330" width="80" height="40" rx="8" ry="8" class="node-shape"></rect>
+                                    <text x="680" y="355" class="node-text small">Member 1</text>
+                                </a>
+                            </g>
+                            
+                            <g class="node sub-node" tabindex="0" role="link" aria-label="Team Member 2 profile">
+                                <a href="./team-member2.html">
+                                    <rect x="720" y="330" width="80" height="40" rx="8" ry="8" class="node-shape"></rect>
+                                    <text x="760" y="355" class="node-text small">Member 2</text>
+                                </a>
+                            </g>
+                            
+                            <g class="node sub-node" tabindex="0" role="link" aria-label="Team Member 3 profile">
+                                <a href="./team-member3.html">
+                                    <rect x="800" y="330" width="80" height="40" rx="8" ry="8" class="node-shape"></rect>
+                                    <text x="840" y="355" class="node-text small">Member 3</text>
+                                </a>
+                            </g>
+                            
+                            <g class="node sub-node" tabindex="0" role="link" aria-label="Team Member 4 profile">
+                                <a href="./team-member4.html">
+                                    <rect x="880" y="330" width="80" height="40" rx="8" ry="8" class="node-shape"></rect>
+                                    <text x="920" y="355" class="node-text small">Member 4</text>
+                                </a>
+                            </g>
+                        </svg>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+        
+       
+    </div>
+</body>
+</html>
