@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,31 @@
     <link rel="stylesheet" href="/css/feedback.css">
     <link rel="stylesheet" href="/css/global.css">
 </head>
+
 <body>
 
     <header class="navbar">
         <div class="brand">
-            <h1>L</h1>
-            <h2>ife</h2>
-            <h1>P</h1>
-            <h2>ulse</h2>
+            <h1>W</a></h1>
+            <h2>ellness</h2>
+            <h1>H</h1>
+            <h2>ub</h2>
         </div>
         <nav>
             <ul>
-                <li><a href="/pages/home.html">Home</a></li>
+                <li><a href="/home.html">Home</a></li>
                 <li><a href="/pages/volunteer.html">Volunteer</a></li>
                 <li><a href="/pages/table.html">Table</a></li>
                 <li><a href="/pages/profile.html">User Profile</a></li>
                 <li><a href="/pages/feedback.html">Feedback</a></li>
                 <li><a href="/pages/site-map.html">Site Map</a></li>
                 <li><a href="/pages/team.html">Team</a></li>
-            </ul>    
+            </ul>
         </nav>
     </header>
 
-        <h2>Feedback Form</h2>
-        <p><strong>Your feedback helps us improve!</strong></p>
+    <h2>Feedback Form</h2>
+    <p><strong>Your feedback helps us improve!</strong></p>
 
     <main>
         <form id="feedbackForm">
@@ -43,12 +45,13 @@
                 <input type="email" id="email" name="email" required title="Please enter a valid email address">
 
                 <label for="phone">Telephone Number:</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Please enter a 10-digit phone number">
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"
+                    title="Please enter a 10-digit phone number">
             </fieldset>
 
             <fieldset>
                 <legend>Feedback Details</legend>
-                
+
                 <label for="feedbackType">Type of Feedback:</label>
                 <select id="feedbackType" name="feedbackType">
                     <option value="general">General Inquiry</option>
@@ -60,8 +63,8 @@
                 <textarea id="comment" name="comment" maxlength="500" oninput="updateCounter()"></textarea>
                 <p id="charCount">500 characters remaining</p>
 
-    
-    
-            </fieldset>   
+
+
+            </fieldset>
         </form>
-    </main>         
+    </main>
