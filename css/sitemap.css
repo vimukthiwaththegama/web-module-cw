@@ -1,0 +1,225 @@
+/* Sitemap Container */
+.sitemap-container {
+    padding: 2rem 0;
+}
+
+.sitemap-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+/* Sitemap Header */
+.sitemap-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+}
+
+.sitemap-header h2 {
+    color: #333333;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.sitemap-header .subtitle {
+    color: #008080; /* Teal color to match profile page */
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* Sitemap Introduction */
+.sitemap-intro {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.sitemap-intro p {
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* SVG Container */
+.sitemap-svg-container {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eaeaea;
+    overflow: auto;
+}
+
+svg#sitemap {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    min-height: 500px;
+}
+
+/* SVG Elements */
+.node-shape {
+    fill: #f7fafc;
+    stroke: #008080; /* Teal border to match profile theme */
+    stroke-width: 2;
+    transition: fill 0.3s ease, stroke 0.3s ease, stroke-width 0.3s ease;
+}
+
+.node-text {
+    fill: #333333;
+    font-size: 14px;
+    text-anchor: middle;
+    pointer-events: none; /* Ensures text doesn't interfere with click events */
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+
+.node-text.small {
+    font-size: 12px;
+}
+
+.connector {
+    stroke: #b2b2b2;
+    stroke-width: 2;
+}
+
+/* Active and Hover States */
+.active-node {
+    fill: rgba(0, 128, 128, 0.2); /* Light teal background */
+    stroke: #008080;
+    stroke-width: 2.5;
+}
+
+.node:hover .node-shape,
+.node:focus .node-shape {
+    fill: rgba(0, 128, 128, 0.1);
+    stroke: #006666; /* Darker teal on hover */
+    stroke-width: 3;
+    cursor: pointer;
+}
+
+.sub-node:hover .node-shape,
+.sub-node:focus .node-shape {
+    fill: rgba(0, 128, 128, 0.1);
+    stroke: #006666;
+    stroke-width: 2.5;
+    cursor: pointer;
+}
+
+/* Ensure that the entire node group is clickable */
+.node a, .sub-node a {
+    cursor: pointer;
+}
+
+/* Focus styles for keyboard navigation */
+.node:focus, .sub-node:focus {
+    outline: none;
+}
+
+.node:focus .node-shape, .sub-node:focus .node-shape {
+    stroke: #004444; /* Very dark teal for keyboard focus */
+    stroke-width: 3;
+    box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.3);
+}
+
+/* Legend */
+.sitemap-legend {
+    padding: 1rem;
+    background-color: #f7fafc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.sitemap-legend h3 {
+    color: #333333;
+    margin-bottom: 1rem;
+}
+
+.sitemap-legend ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.sitemap-legend li {
+    display: flex;
+    align-items: center;
+    color: #4a5568;
+}
+
+.legend-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 8px;
+    border: 2px solid #008080;
+}
+
+.main-page {
+    background-color: #f7fafc;
+}
+
+.sub-page {
+    background-color: #f0f4f8;
+    border-width: 1.5px;
+}
+
+.current-page {
+    background-color: rgba(0, 128, 128, 0.2);
+}
+
+.legend-help {
+    color: #666;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Footer Editor Link */
+.editor-link {
+    color: #008080;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.editor-link:hover {
+    color: #006666;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .sitemap-svg-container {
+        overflow-x: auto;
+    }
+    
+    svg#sitemap {
+        min-width: 800px; /* Ensures the SVG is visible on smaller screens with scrolling */
+    }
+    
+    .sitemap-legend ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sitemap-card {
+        padding: 1rem;
+    }
+    
+    .sitemap-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .sitemap-header .subtitle {
+        font-size: 1rem;
+    }
+}
