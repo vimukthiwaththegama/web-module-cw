@@ -6,12 +6,8 @@
     <title>Feedback</title>
     <link rel="stylesheet" href="/css/feedback.css">
     <link rel="stylesheet" href="/css/global.css">
-    <style>
-        .required-star {
-            color: red;
-            margin-left: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 <body>
     <header class="navbar">
@@ -30,7 +26,7 @@
     </header>
 
     <main>
-        <form id="feedbackForm">  
+        <form id="feedbackForm" action="mailto:ashini.vidana@gmail.com">  
             <div class="feedback-title">
                 <h1 id="feedback-maintitle">FEEDBACK</h1><br>
                 <h3 id="feedback-subtitle">Your feedback helps us improve!!</h3><br>
@@ -45,8 +41,20 @@
 
                 <div class="form-group">
                     <label for="email"><b>Email Address:</b> <span class="required-star">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="saman@gmail.com">
+                    <input type="email" id="email" name="email" required placeholder="saman@gmail.com" title="Please enter a valid email address.">
                 </div>
+                
+                <div class="form-group">
+                    <label for="phone"><b>Telephone Number:</b> <span class="required-star">*</span></label>
+                    <input type="tel" id="phone" name="phone" required placeholder="07X-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                </div>
+
+                <div class="form-group">
+                    <label for="address"><b>Address:</b> <span class="required-star">*</span></label>
+                    <textarea id="address" name="address" required placeholder="Enter your address..." maxlength="250" oninput="updateCharCount('address', 'addressCount', 250)"></textarea><br>
+                    <small><span id="addressCount">250</span> characters remaining</small>
+                </div>
+                 
             </fieldset>
 
             <fieldset>
@@ -77,7 +85,8 @@
 
                 <div class="form-group">
                     <label for="drawbacks"><b>If no, please tell us the drawbacks...</b></label>
-                    <textarea id="drawbacks" name="drawbacks" maxlength="500" placeholder="Add your message here...."></textarea>
+                    <textarea id="drawbacks" name="drawbacks" maxlength="500" placeholder="Add your message here...." oninput="updateCharCount('drawbacks', 'drawbacksCount', 500)"></textarea><br>
+                    <small><span id="drawbacksCount">500</span> characters remaining</small>
                 </div>
 
 
@@ -102,26 +111,43 @@
                         <span class="emoji" onclick="setRating(2)">&#128528;</span>
                         <span class="emoji" onclick="setRating(3)">&#128578;</span>
                         <span class="emoji" onclick="setRating(4)">&#128515;</span>
-                        <span class="emoji" onclick="setRating(5)">&#128525;</span>
+                        <span class="emoji" onclick="setRating(5)">&#129321;</span>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label><b>Which health topics would you like to see more of?</b> <span class="required-star">*</span>
-                    <input type="checkbox" name="topics" value="recipes" required> Healthy Recipes
-                    <input type="checkbox" name="topics" value="tips"> Fitness Tips
-                    <input type="checkbox" name="topics" value="mindfulness"> Mindfulness Techniques
-                    <input type="checkbox" name="topics" value="prevention"> Disease Prevention</label>
+                    <label for="topics"><b>What topics interest you?</b></label>
+                    <select id="topics" name="topics" multiple size="1">
+                        <option value="nutrition">Nutrition</option>
+                        <option value="fitness">Fitness</option>
+                        <option value="mentalHealth">Mental Health</option>
+                        <option value="Environmental">Environmental Health</option>
+                        <option value="Sleep Health">Sleep Health</option>
+                        <option value="Children’s Health ">Children’s Health </option>
+                        <option value="Healthy Aging">Healthy Aging</option>
+                        <option value="Chronic Disease Management">Chronic Disease Management</option>
+                    </select>
                 </div>
+                
 
                 <div class="form-group">
                     <label for="requests"><b>Do you have any additional questions or requests?</b></label>
-                    <textarea id="requests" name="requests" maxlength="500" placeholder="Add your message here...."></textarea>
+                    <textarea id="requests" name="requests" maxlength="500" placeholder="Add your message here...." oninput="updateCharCount('requests', 'requestsCount', 500)"></textarea><br>
+                    <small><span id="requestsCount">500</span> characters remaining</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="attachment"><b>Upload Attachment:</b></label>
+                    <input type="file" id="attachment" name="attachment">
+                </div>
+                
+
+                <div class="form-group">
+                    <label for="feedback-date"><b>Select date to schedule feedback submission:</b> <span class="required-star">*</span></label>
+                    <input type="date" id="feedback-date" name="feedback-date" required>
                 </div>
             
             </fieldset>
-
-            
 
             <div class="form-group checkbox-group" id="one">
                 <label>
@@ -130,19 +156,76 @@
                 </label>
             </div>
 
-            <button type="submit">Submit</button>
+            <div class="button-container">
+                <button type="reset" class="reset-btn">Reset</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
         </form>
+
+        <!-- Modal for successful submission -->
+        <div id="feedback-modal-container" class="feedback-modal-container">
+            <div class="modal-content">
+                <div class="close-icon-container">
+                    <span class="close-icon" id="feedback-close-icon">&times;</span>
+                </div>
+                <div class="tick-icon-container">
+                    <div class="tick-icon-div"><i class="far fa-check-circle tick-icon"></i></div>
+                </div>
+                <div class="modal-title1">
+                    Submission Successful
+                </div>
+                <div class="modal-title2">
+                    Thank You for Your Valuable Time
+                </div>
+                <div>
+                    <a href="home.html" class="feedback-to-home"><b>Back to Home</b></a>
+                </div>
+            </div>
+        </div>
     </main>
 
     <script>
+        
         document.getElementById("feedbackForm").addEventListener("submit", function(event) {
-            let checkboxes = document.querySelectorAll("input[name='helpfulSections']:checked");
-            let topics = document.querySelectorAll("input[name='topics']:checked");
-            if (checkboxes.length === 0 || topics.length === 0) {
-                alert("Please select at least one option in the required checkboxes.");
-                event.preventDefault();
-            }
+            event.preventDefault(); 
+
+            // Collect form data
+            let fullName = document.getElementById("fullName").value;
+            let email = document.getElementById("email").value;
+            let firstTime = document.querySelector("input[name='firstTime']:checked").value;
+            let findMethod = document.getElementById("findMethod").value;
+            let recommend = document.querySelector("input[name='recommend']:checked").value;
+
+            let formData = `Full Name: ${fullName}\nEmail: ${email}\nFirst Time: ${firstTime}\nFind Method: ${findMethod}\nRecommend: ${recommend}`;
+
+            // Send email using mailto
+            window.location.href = `mailto:ashini.vidana@gmail.com?subject=Feedback Submission&body=${encodeURIComponent(formData)}`;
+
+            // Show success message
+            document.getElementById("feedback-modal-container").style.display = "block";
         });
+
+        // Close modal
+        document.getElementById("feedback-close-icon").addEventListener("click", function() {
+            document.getElementById("feedback-modal-container").style.display = "none";
+        });
+
+        function setRating(rating) {
+            let emojis = document.querySelectorAll(".emoji");
+            emojis.forEach((emoji, index) => {
+                emoji.classList.remove("selected");
+                if (index === rating - 1) {
+                    emoji.classList.add("selected");
+                }
+            });
+        }
+
+        function updateCharCount(textareaId, counterId, maxLength) {
+              let textarea = document.getElementById(textareaId);
+              let counter = document.getElementById(counterId);
+              counter.textContent = maxLength - textarea.value.length;
+        }
+
     </script>
 </body>
 </html>

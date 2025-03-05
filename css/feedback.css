@@ -18,13 +18,13 @@ form {
     margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px #ccc;e
+    box-shadow: 0px 0px 10px #ccc;
 }
 
 .feedback-title {
-    text-align: center; 
-    margin-left: auto;
-    margin-right: auto;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 fieldset {
@@ -95,13 +95,52 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
-}
-
-textarea {
     resize: vertical;
     min-height: 80px;
     margin-left: 80px;
 }
+
+small {
+    position:relative;
+    bottom: 5px;
+    left: 300px;
+    font-size: 13px;
+    color: #1d1c1c;
+}
+
+input:invalid, textarea:invalid {
+    border: 2px solid rgb(248, 119, 119);
+    background-color: #f7f2f2;
+}
+
+
+select[multiple]
+{
+    width: 50%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    resize: vertical;
+    min-height: 80px;
+    margin-left: 100px;
+    background-color: white;
+}
+
+input[type="date"],input[type="file"] {
+    width: 55%;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    resize: vertical;
+    min-height: 80px;
+    margin-left: 100px;
+    background-color: white;
+}
+
 
 .rating {
     display: flex;
@@ -111,9 +150,10 @@ textarea {
 }
 
 .emoji {
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s;
+    opacity: 0.5; /* Dim unselected emojis */
 }
 
 .emoji:hover {
@@ -121,6 +161,10 @@ textarea {
     opacity: 1;
 }
 
+.selected {
+    opacity: 1;
+    color: #ffbf00; /* Highlight selected emoji */
+}
 
 .checkbox-group {
     gap: 3px; 
@@ -129,8 +173,6 @@ textarea {
     
 }
 
-
-
 .checkbox-group input[type="checkbox"] {
 position: relative;
     top: -0.5px;
@@ -138,25 +180,6 @@ position: relative;
     height: 16px;
     margin-top: 5px;
     padding-left: 80px;
-}
-
-
-button {
-    display: block;
-    width: 30%;
-    padding: 10px;
-    background-color: #2E8B57;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    margin-top: 10px;
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    background-color: #3CB371;
 }
 
 #charCount {
@@ -189,10 +212,151 @@ small.required-message {
     margin-top: 5px;
 }
 
-.required {
+.required-star {
     color: red;
-    font-weight: bold;
+    margin-left: 5px;
 }
+
+button {
+    display: block;
+    width: 30%;
+    padding: 10px;
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+
+/* Style for button container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Reset Button */
+.reset-btn {
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.reset-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color:  #2E8B57;
+}
+
+/* Background overlay */
+.feedback-modal-container {
+    display: flex; /* Show modal by default */
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(58, 224, 49, 0.6);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Modal box */
+.modal-content {
+    background-color: #124212;
+    height: 400px;
+    width: 700px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Close button */
+.close-icon-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.close-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Tick icon */
+.tick-icon-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tick-icon-div {
+    font-size: 100px;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.tick-icon {
+    color: rgb(44, 115, 44);
+}
+
+/* Modal text */
+.modal-title1 {
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 200;
+    color: rgb(179, 238, 130);
+}
+
+.modal-title2 {
+    font-size: 20px;
+    font-weight: 200;
+    color: white;
+}
+
+/* Back to home button */
+.feedback-to-home {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #f0c711;
+    color: rgb(27, 27, 27);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.feedback-to-home:hover {
+    background-color: #e99e13;
+}
+
 
 
 
