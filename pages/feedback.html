@@ -6,10 +6,14 @@
     <title>Feedback</title>
     <link rel="stylesheet" href="/css/feedback.css">
     <link rel="stylesheet" href="/css/global.css">
+    <style>
+        .required-star {
+            color: red;
+            margin-left: 5px;
+        }
+    </style>
 </head>
-
 <body>
-    
     <header class="navbar">
         <h1>Good Health & Well-Being</h1>
         <nav>
@@ -25,85 +29,120 @@
         </nav>
     </header>
 
-    
-        
-    
     <main>
+        <form id="feedbackForm">  
             <div class="feedback-title">
-                <div class="feedback-maintitle"><h1 id="feedback-maintitle">FEEDBACK</h1></div>
-                <div class="feedback-subtitle"><h3 id="feedback-subtitle">Your feedback helps us improve!!</h3></div>
+                <h1 id="feedback-maintitle">FEEDBACK</h1><br>
+                <h3 id="feedback-subtitle">Your feedback helps us improve!!</h3><br>
             </div>
-            
-        <form id="feedbackForm">    
+
             <fieldset>
                 <legend>Personal Details</legend>
-                <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" required placeholder="Saman Perera">
+                <div class="form-group">
+                    <label for="fullName"><b>Full Name:</b> <span class="required-star">*</span></label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Saman Perera">
+                </div>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required placeholder="saman@gmail.com">
+                <div class="form-group">
+                    <label for="email"><b>Email Address:</b> <span class="required-star">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="saman@gmail.com">
+                </div>
             </fieldset>
 
             <fieldset>
                 <legend>Feedback Details</legend>
-                    <label>Was this your first time visiting this site?
-                           <input type="radio" id="firstTimeYes" name="firstTime" value="yes"> Yes
-                           <input type="radio" id="firstTimeNo" name="firstTime" value="no"> No
-                    </label>
-               
-
-                <label for="findMethod">How did you find this website?
-                <select id="findMethod" name="findMethod">
-                    <option value="google">Via Google</option>
-                    <option value="socialMedia">Via Social Media</option>
-                    <option value="recommendation">Recommended by Someone</option>
-                    <option value="other">Other</option>
-                </select></label>
-
-                <label>Would you recommend this site to someone?
-                <input type="radio" id="recommendYes" name="recommend" value="yes"> Yes
-                <input type="radio" id="recommendNo" name="recommend" value="no"> No</label>
-
-                <label for="drawbacks">If no, please tell us the drawbacks...</label>
-                <textarea id="drawbacks" name="drawbacks" maxlength="500"></textarea>
-                
-                <label>Was this website easy to navigate through?
-                <input type="radio" id="navigateYes" name="navigate" value="yes"> Yes
-                <input type="radio" id="navigateNo" name="navigate" value="no"> No</label>
-
-                <label>Which sections of our website did you find most helpful?
-                <input type="checkbox" id="nutrition" name="helpfulSections" value="nutrition"> Nutrition
-                <input type="checkbox" id="fitness" name="helpfulSections" value="fitness"> Fitness
-                <input type="checkbox" id="mentalHealth" name="helpfulSections" value="mentalHealth"> Mental Health
-                <input type="checkbox" id="healthcare" name="helpfulSections" value="healthcare"> Healthcare
-            </label>
-
-                <label>Rate Our Health Initiative:</label>
-                <div class="rating">
-                    <span class="emoji" onclick="setRating(1)">&#128577;</span>
-                    <span class="emoji" onclick="setRating(2)">&#128528;</span>
-                    <span class="emoji" onclick="setRating(3)">&#128578;</span>
-                    <span class="emoji" onclick="setRating(4)">&#128515;</span>
-                    <span class="emoji" onclick="setRating(5)">&#128525;</span>
+                <div class="form-group">
+                    <label><b>Was this your first time visiting this site?</b> <span class="required-star">*</span>
+                    <input type="radio" name="firstTime" value="yes" required> Yes
+                    <input type="radio" name="firstTime" value="no" required> No</label>
                 </div>
 
-                <label>Which health topics would you like to see more of?
-                    <input type="checkbox" id="recipes" name="helpfulSections" value="recipes"> Healthy Recipes
-                    <input type="checkbox" id="Tips" name="helpfulSections" value="tips"> Fitness Tips
-                    <input type="checkbox" id="Mindfulness" name="helpfulSections" value="Mindfulness"> Mindfulness Techniques
-                    <input type="checkbox" id="Prevention" name="helpfulSections" value="Prevention"> Disease Prevention
-                </label>
+                <div class="form-group"id="select-box-group">
+                    <label for="findMethod"><b>How did you find this website?</b> <span class="required-star">*</span></label>
+                    <select id="findMethod" name="findMethod" required>
+                        <option value="">Select an option</option>
+                        <option value="google">Via Google</option>
+                        <option value="socialMedia">Via Social Media</option>
+                        <option value="recommendation">Recommended by Someone</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
 
-                <label for="requests">Do you have any additional quections or requests?</label>
-                <textarea id="drawbacks" name="drawbacks" maxlength="500"placeholder="Add your message here...."></textarea>
 
+                <div class="form-group">
+                    <label><b>Would you recommend this site to someone?</b> <span class="required-star">*</span>
+                    <input type="radio" name="recommend" value="yes" required id="yes"> Yes
+                    <input type="radio" name="recommend" value="no" required> No</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="drawbacks"><b>If no, please tell us the drawbacks...</b></label>
+                    <textarea id="drawbacks" name="drawbacks" maxlength="500" placeholder="Add your message here...."></textarea>
+                </div>
+
+
+                <div class="form-group">
+                    <label><b>Was this website easy to navigate through?</b> <span class="required-star">*</span>
+                    <input type="radio" name="navigate" value="yes" required> Yes
+                    <input type="radio" name="navigate" value="no" required> No</label>
+                </div>
+
+                <div class="form-group">
+                    <label><b>Which sections of our website did you find most helpful?</b> <span class="required-star">*</span>
+                    <input type="checkbox" name="helpfulSections" value="nutrition" required> Nutrition
+                    <input type="checkbox" name="helpfulSections" value="fitness"> Fitness
+                    <input type="checkbox" name="helpfulSections" value="mentalHealth"> Mental Health
+                    <input type="checkbox" name="helpfulSections" value="healthcare"> Healthcare</label>
+                </div>
+
+                <div class="form-group">
+                    <label><b>Rate Our Health Initiative:</b> <span class="required-star">*</span></label>
+                    <div class="rating">
+                        <span class="emoji" onclick="setRating(1)">&#128577;</span>
+                        <span class="emoji" onclick="setRating(2)">&#128528;</span>
+                        <span class="emoji" onclick="setRating(3)">&#128578;</span>
+                        <span class="emoji" onclick="setRating(4)">&#128515;</span>
+                        <span class="emoji" onclick="setRating(5)">&#128525;</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><b>Which health topics would you like to see more of?</b> <span class="required-star">*</span>
+                    <input type="checkbox" name="topics" value="recipes" required> Healthy Recipes
+                    <input type="checkbox" name="topics" value="tips"> Fitness Tips
+                    <input type="checkbox" name="topics" value="mindfulness"> Mindfulness Techniques
+                    <input type="checkbox" name="topics" value="prevention"> Disease Prevention</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="requests"><b>Do you have any additional questions or requests?</b></label>
+                    <textarea id="requests" name="requests" maxlength="500" placeholder="Add your message here...."></textarea>
+                </div>
+            
             </fieldset>
 
+            
+
+            <div class="form-group checkbox-group" id="one">
+                <label>
+                    <input type="checkbox" id="agreeUpdates" name="agreeUpdates">
+                        I agree to receive updates about this website via email
+                </label>
+            </div>
 
             <button type="submit">Submit</button>
         </form>
     </main>
-    
 
-</body>    
-      
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+            let checkboxes = document.querySelectorAll("input[name='helpfulSections']:checked");
+            let topics = document.querySelectorAll("input[name='topics']:checked");
+            if (checkboxes.length === 0 || topics.length === 0) {
+                alert("Please select at least one option in the required checkboxes.");
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
