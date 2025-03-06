@@ -131,6 +131,7 @@ select[multiple]
 input[type="date"],input[type="file"] {
     width: 55%;
     padding: 20px;
+    height:2px;
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -140,7 +141,6 @@ input[type="date"],input[type="file"] {
     margin-left: 100px;
     background-color: white;
 }
-
 
 .rating {
     display: flex;
@@ -357,6 +357,15 @@ button {
     background-color: #e99e13;
 }
 
+@media (max-width: 480px) {
+    .rating {
+        flex-direction: column;
+        align-items: center;
+    }
+    .checkbox-group {
+        flex-direction: column;
+    }
+}
 
 
 
