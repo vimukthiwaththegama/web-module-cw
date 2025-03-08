@@ -7,10 +7,11 @@
     <title>Page Editor Student - Ashini</title>
 
     <link rel="stylesheet" href="/css/pageEditor_validator.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
 
 </head>
-<body>
+<body id="top">
     
     <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
 
@@ -42,7 +43,7 @@
     </header>
 
     <section class="stud">
-        <h2>Student name, student role</h2>
+        <h2>Ashini Vidanapathirana, student-3</h2>
     </section>
 
     <div class="container">
@@ -52,60 +53,60 @@
             <!-- Update those first three sections for the pages you were responsible to implement -->
 
             <section>
-                <h2 id="splash">Splash Page</h2>
+                <h2 id="feedback">Feedback Page</h2>
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+                        <p>The feedback page implements a structured HTML5 form with semantic elements to create an intuitive user feedback system. I utilized the form element as the container, with nested fieldset elements to logically organize related inputs into "Personal Details" and "Feedback Details" sections. Key HTML elements include various input types (text, email, tel, radio, checkbox, file, date), textarea for longer responses, and select for dropdown options. The form validation employs the required attribute and pattern matching for telephone numbers to ensure data integrity. CSS styling creates visual hierarchy through consistent spacing, color-coded sections (background: #c0ffba for fieldsets), and responsive form controls. Interactive elements are enhanced with JavaScript functions for character counting, emoji-based rating selection, and a modal confirmation system that appears upon successful submission, providing immediate user feedback.</p> 
                     
                     <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                        <p>The feedback page incorporates accessibility principles to ensure usability for all visitors, including those using assistive technologies. Semantic structure is established through proper HTML elements (header, main, fieldset, legend) that create a logical document outline for screen readers. Form accessibility is implemented through explicit label associations with each form control and clear indication of required fields using both visual cues (asterisks) and the required attribute. The color scheme maintains sufficient contrast with dark text on light backgrounds for readability. Visual feedback for validation states helps users identify and correct errors through the invalid pseudo-class styling. Responsive design considerations are implemented through media queries that reorganize content for smaller screens, particularly adjusting the rating emoji layout and checkbox groups into column formats when viewed on mobile devices.</p>
                     
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#splashVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+                        <p><a href="/validation/validation_ST3.html">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
                     <h3>Link to the page</h3>
-                        <p><a href="splash.html">Include a link to the actual page you describe.</a></p>
+                        <p><a href="/pages/feedback.html">Include a link to the actual page you describe.</a></p>
             </section>
 
             <section>
-                <h2 id="volunteer">Volunteer Page</h2>
+                <h2 id="team">Team Page</h2>
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+                        <p>The team page utilizes a responsive HTML5 structure with semantic elements to showcase team members in an interactive layout. The page is built around the section class="team-container" element, which houses multiple div class="team-member" components arranged in a flex-based grid system. Each team member card contains an image thumbnail with the tabindex="0" attribute for keyboard navigation and a details section with their name, role, and contributions. The design implements a hover effect mechanism using CSS transitions (transition: transform 0.6s, transition: opacity 0.5s) that enlarges the card (transform: scale(1.2)) and displays additional information on interaction. The styling incorporates a consistent color scheme with green accents (background-color: rgba(67, 156, 67, 0.87)) and subtle shadow effects (box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)) for visual depth. Typography leverages the imported Google Fonts 'Poppins' and 'Montserrat' with varied font weights to create visual hierarchy within each team member card.</p> 
 
                     <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                        <p>The team page implements several accessibility features to ensure inclusive user experience. The page structure includes proper heading hierarchy starting with the main h1 class="team-title" followed by appropriate subheadings. Images of team members include descriptive alt attributes (alt="Student 1") to provide context for screen reader users. Keyboard accessibility is enhanced through the tabindex="0" attribute on team member thumbnails, allowing focus navigation, complemented by a visible focus indicator (outline: 2px solid #851524) when elements are selected via keyboard. The page provides explicit instructions ("Hover over the images for details!!") to guide users on interaction expectations. Color contrast is maintained throughout the design with dark text on light backgrounds. The responsive layout implemented through CSS flexbox (display: flex; flex-wrap: wrap) ensures content remains accessible across different screen sizes. While the hover mechanism reveals additional information visually, the base information remains accessible to all users regardless of input method.</p>
 
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
                         <p><a href="validation_ST0.html#volunteerVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
                         
                     <h3>Link to the page</h3>
-                        <p><a href="volunteer.html">Include a link to the actual page you describe.</a></p>
+                        <p><a href="/pages/team.html">Include a link to the actual page you describe.</a></p>
             </section>
 
             <section>
                 <h2 id="content">Content Page</h2>
                     <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+                        <p>The content page implements a comprehensive HTML5 document structure focused on mental health information. The page architecture uses nested semantic elements including a navigation sidebar (nav class="page-nav") with anchor links to corresponding sections, and multiple section elements with unique IDs for targeted navigation. The design incorporates varied content presentation techniques including headings, paragraphs, unordered lists, and highlighted information boxes (div class="highlight-box"). Media integration is achieved through responsive image containers with captions. CSS styling leverages CSS variables (:root with --primary-green, --dark-green, etc.) for consistent color theming throughout the page. Interactive elements include animated navigation links (transform: translateY(-3px) on hover) and a fixed-position "back to top" button (position: fixed; bottom: 30px;) for improved navigation on longer content. The responsive layout adapts to different screen sizes through media queries (@media (max-width: 768px)) that adjust font sizes, spacing, and container widths for mobile devices.</p> 
 
                     <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                        <p>The content page demonstrates strong accessibility implementation through several key features. The page employs proper semantic structure with section elements, clearly identified headings (h2, h3, h4), and descriptive link text in the navigation. An ID-based navigation system (href="#understanding") with visible, high-contrast links enables users to quickly access specific content sections. Images include descriptive alt attributes and captions for context, ensuring non-visual users can understand the content. The color scheme is defined using CSS variables that maintain WCAG-compliant contrast ratios, particularly between text and background elements. User orientation is enhanced through visual indicators like section borders, background colors, and consistent styling patterns. The page includes a "back to top" button with a clear symbol (↑) that helps users navigate long content without excessive scrolling. The responsive design maintains readability across devices with adjusted typography and layout for smaller screens. Important information is highlighted visually (div class="highlight-box") while remaining accessible to screen readers through proper heading structure.</p>
 
                     <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
                         <p><a href="validation_ST0.html#contentVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
                         
                     <h3>Link to the page</h3>
-                        <p><a href="content.html">Include a link to the actual page you describe.</a></p>
+                        <p><a href="/content/content_ST3.html">Include a link to the actual page you describe.</a></p>
             </section>
 
             <section>
                 <h2 id="challenge"> Challenges and Lessons Learned</h2>
-                    <p>Detail any challenges encountered during the implementation process and explain how they were resolved. Reflect on the lessons learned from overcoming these challenges.</p> 
+                    <p>I faced and conquered a number of obstacles when creating the content, team, and feedback pages.  Maintaining distinct visual identities for every part while applying uniform styling to all pages was a major problem.  This necessitated the implementation of common variables and classes as well as meticulous CSS file management.  It was difficult to create responsive designs that functioned well on a variety of device sizes, especially for the content page's navigation system and the team page's hover effects.  I discovered how crucial it is to thoroughly test across many browsers and devices to guarantee compatibility.A careful balance between client-side and future server-side validation requirements was necessary for the feedback form's validation procedures.  I learned a lot about responsive design principles, version control, and collaborative development from these problems.  The project reaffirmed how crucial it is to plan semantic HTML structure before styling because doing so much enhances accessibility and maintenance. </p> 
             </section>
 
             <section>
                 <h2 id="compliance"> Compliance</h2>
-                    <p>Discuss how the pages you have created are compliant with Janet regulations governing web page publication. This includes demonstrating your understanding and application of these regulations. Be realistic and truthful.</p> 
+                    <p>Every page was created using best practices and current web standards.  The HTML documents adhere to the correct document structure with the relevant metadata and use the HTML5 semantic components (header, section, nav, and footer).  Using CSS variables for consistent theming and flexbox for layouts, CSS style complies with contemporary standards.  Semantic markup, keyboard navigation, detailed alternative text for images, and appropriate color contrast all help the pages comply with WCAG 2.1 AA accessibility standards.  The feedback page's form elements contain visual cues about required fields and suitable validation features.  By effectively adjusting layouts for varying viewport widths, the responsive design implementation guarantees adherence to mobile-friendly rules.  In order to enhance site-wide usability and conformity to web design standards, every page keeps a uniform navigation structure.</p> 
 
                     
             </section>
@@ -129,29 +130,11 @@
         <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
             <ul class="top-level-ul">
                 <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
-                <li>Student 1</li>
-                    <ul> 
-                        <li><a href="#splash">Splash page</a></li>
-                        <li><a href="#volunteer">Volunteer page</a></li>
-                        <li><a href="#content">Content page</a></li>
-                    </ul>
-                <li>Student 2</li>
-                    <ul>
-                        <li><a href="#">Home page </a></li>
-                        <li><a href="#">Table page</a></li>
-                        <li><a href="#">Content page</a></li>
-                    </ul>
                 <li>Student 3</li>
                     <ul>
-                        <li><a href="#">Feedback page</a> </li>
-                        <li><a href="#">Team page</a></li>
-                        <li><a href="#">Content page</a></li>
-                    </ul>
-                <li>Student 4</li>
-                    <ul>
-                        <li><a href="#">Profile page </a></li>
-                        <li><a href="#">Sitemap page</a></li>
-                        <li><a href="#">Content page</a></li>
+                        <li><a href="/pages/feedback.html">Feedback page</a> </li>
+                        <li><a href="/pages/team.html">Team page</a></li>
+                        <li><a href="/content/content_ST3.html">Content page</a></li>
                     </ul>
                 <li><a href="#challenge">Challenges and Lessons Learned</a></li>
                 <li><a href="#compliance">Compliance</a></li>
