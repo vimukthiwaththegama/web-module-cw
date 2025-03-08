@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback - Wellness Way</title>
+    <title>Feedback</title>
     <link rel="stylesheet" href="/css/feedback.css">
     <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 
 <body>
-
     <header class="navbar">
         <div class="brand">
             <h1><a href="/home.html">W</a></h1>
@@ -38,45 +39,215 @@
         </nav>
     </header>
 
-    <h2>Feedback Form</h2>
-    <p><strong>Your feedback helps us improve!</strong></p>
-
     <main>
-        <form id="feedbackForm">
+        <form id="feedbackForm" action="mailto:ashini.vidana@gmail.com">  
+            <div class="feedback-title">
+                <h1 id="feedback-maintitle">FEEDBACK</h1><br>
+                <h3 id="feedback-subtitle">Your feedback helps us improve!!</h3><br>
+            </div>
+
             <fieldset>
                 <legend>Personal Details</legend>
-                <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" required title="Please enter your full name">
+                <div class="form-group">
+                    <label for="fullName"><b>Full Name:</b> <span class="required-star">*</span></label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Saman Perera">
+                </div>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required title="Please enter a valid email address">
+                <div class="form-group">
+                    <label for="email"><b>Email Address:</b> <span class="required-star">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="saman@gmail.com" title="Please enter a valid email address.">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone"><b>Telephone Number:</b> <span class="required-star">*</span></label>
+                    <input type="tel" id="phone" name="phone" required placeholder="07X-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                </div>
 
-                <label for="phone">Telephone Number:</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"
-                    title="Please enter a 10-digit phone number">
+                <div class="form-group">
+                    <label for="address"><b>Address:</b> <span class="required-star">*</span></label>
+                    <textarea id="address" name="address" required placeholder="Enter your address..." maxlength="250" oninput="updateCharCount('address', 'addressCount', 250)"></textarea><br>
+                    <small><span id="addressCount">250</span> characters remaining</small>
+                </div>
+                 
             </fieldset>
 
             <fieldset>
                 <legend>Feedback Details</legend>
+                <div class="form-group">
+                    <label><b>Was this your first time visiting this site?</b> <span class="required-star">*</span>
+                    <input type="radio" name="firstTime" value="yes" required> Yes
+                    <input type="radio" name="firstTime" value="no" required> No</label>
+                </div>
 
-                <label for="feedbackType">Type of Feedback:</label>
-                <select id="feedbackType" name="feedbackType">
-                    <option value="general">General Inquiry</option>
-                    <option value="suggestion">Suggestion</option>
-                    <option value="complaint">Complaint</option>
-                </select>
+                <div class="form-group"id="select-box-group">
+                    <label for="findMethod"><b>How did you find this website?</b> <span class="required-star">*</span></label>
+                    <select id="findMethod" name="findMethod" required>
+                        <option value="">Select an option</option>
+                        <option value="google">Via Google</option>
+                        <option value="socialMedia">Via Social Media</option>
+                        <option value="recommendation">Recommended by Someone</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
 
-                <label for="comment">Comment or Message:</label>
-                <textarea id="comment" name="comment" maxlength="500" oninput="updateCounter()"></textarea>
-                <p id="charCount">500 characters remaining</p>
 
+                <div class="form-group">
+                    <label><b>Would you recommend this site to someone?</b> <span class="required-star">*</span>
+                    <input type="radio" name="recommend" value="yes" required id="yes"> Yes
+                    <input type="radio" name="recommend" value="no" required> No</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="drawbacks"><b>If no, please tell us the drawbacks...</b></label>
+                    <textarea id="drawbacks" name="drawbacks" maxlength="500" placeholder="Add your message here...." oninput="updateCharCount('drawbacks', 'drawbacksCount', 500)"></textarea><br>
+                    <small><span id="drawbacksCount">500</span> characters remaining</small>
+                </div>
+
+
+                <div class="form-group">
+                    <label><b>Was this website easy to navigate through?</b> <span class="required-star">*</span>
+                    <input type="radio" name="navigate" value="yes" required> Yes
+                    <input type="radio" name="navigate" value="no" required> No</label>
+                </div>
+
+                <div class="form-group">
+                    <label><b>Which sections of our website did you find most helpful?</b> <span class="required-star">*</span>
+                    <input type="checkbox" name="helpfulSections" value="nutrition" required> Nutrition
+                    <input type="checkbox" name="helpfulSections" value="fitness"> Fitness
+                    <input type="checkbox" name="helpfulSections" value="mentalHealth"> Mental Health
+                    <input type="checkbox" name="helpfulSections" value="healthcare"> Healthcare</label>
+                </div>
+
+                <div class="form-group">
+                    <label><b>Rate Our Health Initiative:</b> <span class="required-star">*</span></label>
+                    <div class="rating">
+                        <span class="emoji" onclick="setRating(1)">&#128577;</span>
+                        <span class="emoji" onclick="setRating(2)">&#128528;</span>
+                        <span class="emoji" onclick="setRating(3)">&#128578;</span>
+                        <span class="emoji" onclick="setRating(4)">&#128515;</span>
+                        <span class="emoji" onclick="setRating(5)">&#129321;</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="topics"><b>What topics interest you?</b></label>
+                    <select id="topics" name="topics" multiple size="4">
+                        <option value="nutrition">Nutrition</option>
+                        <option value="fitness">Fitness</option>
+                        <option value="mentalHealth">Mental Health</option>
+                        <option value="Environmental">Environmental Health</option>
+                        <option value="Sleep Health">Sleep Health</option>
+                        <option value="Children’s Health ">Children’s Health </option>
+                        <option value="Healthy Aging">Healthy Aging</option>
+                        <option value="Chronic Disease Management">Chronic Disease Management</option>
+                    </select>
+                </div>
+                
+
+                <div class="form-group">
+                    <label for="requests"><b>Do you have any additional questions or requests?</b></label>
+                    <textarea id="requests" name="requests" maxlength="500" placeholder="Add your message here...." oninput="updateCharCount('requests', 'requestsCount', 500)"></textarea><br>
+                    <small><span id="requestsCount">500</span> characters remaining</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="attachment"><b>Upload Attachment:</b></label>
+                    <input type="file" id="attachment" name="attachment">
+                </div>
+                
+
+                <div class="form-group">
+                    <label for="feedback-date"><b>Select date to schedule feedback submission:</b> <span class="required-star">*</span></label>
+                    <input type="date" id="feedback-date" name="feedback-date" required>
+                </div>
+            
+            </fieldset>
+
+            <div class="form-group checkbox-group" id="one">
+                <label>
+                    <input type="checkbox" id="agreeUpdates" name="agreeUpdates">
+                        I agree to receive updates about this website via email
+                </label>
+            </div>
+
+            <div class="button-container">
+                <button type="reset" class="reset-btn">Reset</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+
+        <!-- Modal for successful submission -->
+        <div id="feedback-modal-container" class="feedback-modal-container">
+            <div class="modal-content">
+                <div class="close-icon-container">
+                    <span class="close-icon" id="feedback-close-icon">&times;</span>
+                </div>
+                <div class="tick-icon-container">
+                    <div class="tick-icon-div"><i class="far fa-check-circle tick-icon"></i></div>
+                </div>
+                <div class="modal-title1">
+                    Submission Successful
+                </div>
+                <div class="modal-title2">
+                    Thank You for Your Valuable Time
+                </div>
+                <div>
+                    <a href="home.html" class="feedback-to-home"><b>Back to Home</b></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script>
+        
+        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            // Collect form data
+            let fullName = document.getElementById("fullName").value;
+            let email = document.getElementById("email").value;
+            let firstTime = document.querySelector("input[name='firstTime']:checked").value;
+            let findMethod = document.getElementById("findMethod").value;
+            let recommend = document.querySelector("input[name='recommend']:checked").value;
+
+            let formData = `Full Name: ${fullName}\nEmail: ${email}\nFirst Time: ${firstTime}\nFind Method: ${findMethod}\nRecommend: ${recommend}`;
+
+            // Send email using mailto
+            window.location.href = `mailto:ashini.vidana@gmail.com?subject=Feedback Submission&body=${encodeURIComponent(formData)}`;
+
+            // Show success message
+            document.getElementById("feedback-modal-container").style.display = "block";
+        });
+
+        // Close modal
+        document.getElementById("feedback-close-icon").addEventListener("click", function() {
+            document.getElementById("feedback-modal-container").style.display = "none";
+        });
+
+        function setRating(rating) {
+            let emojis = document.querySelectorAll(".emoji");
+            emojis.forEach((emoji, index) => {
+                emoji.classList.remove("selected");
+                if (index === rating - 1) {
+                    emoji.classList.add("selected");
+                }
+            });
+        }
+
+        function updateCharCount(textareaId, counterId, maxLength) {
+              let textarea = document.getElementById(textareaId);
+              let counter = document.getElementById(counterId);
+              counter.textContent = maxLength - textarea.value.length;
+        }
+
+    </script>
+</body>
+</html>
 
 
             </fieldset>
         </form>
     </main>
 
-    <footer>
-        <p class="footer-text">&copy; 2025 Life Pulse. All Rights Reserved.</p>
-    </footer>
-    </body>

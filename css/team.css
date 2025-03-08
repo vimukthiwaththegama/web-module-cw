@@ -1,8 +1,12 @@
-
 /*team page style */
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
 .team-title{
-    margin-top: 60px;
+    margin-top: 35px;
     text-align: center;
     font-weight: 300;
 }
@@ -18,21 +22,12 @@ h3{
     font-weight: 200;
 }
 
-.input-wrapper-container{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(49, 40, 20);
-}
-
 .team-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 75px;
+    margin-top: 30px;
 }
 
 .team-member {
@@ -55,7 +50,10 @@ h3{
     transition: opacity 0.5s;
 }
 
-
+.thumbnail:hover {
+    opacity: 0.8;
+    border: 3px solid #4CAF50;
+}
 
 .member-details {
     position:static;
@@ -98,7 +96,7 @@ img {
 }
 
 
-/* Section Styling */
+
 section {
     padding: 20px;
     margin: 20px 0;
