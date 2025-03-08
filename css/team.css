@@ -1,7 +1,7 @@
 /*team page style */
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-size:1.2em ; 
 }
 
 
@@ -20,6 +20,7 @@ h3{
     color: rgba(12, 39, 1, 0.849);
     text-align: center;
     font-weight: 200;
+    font-family: 'Poppins', sans-serif;
 }
 
 .team-container {
@@ -86,6 +87,14 @@ ul {
     margin-left: 20px;
 }
 
+li{
+    font-family: 'Poppins', sans-serif;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+}
+
 img {
     width: 100%;
     max-width: 600px;
@@ -100,7 +109,7 @@ img {
 section {
     padding: 20px;
     margin: 20px 0;
-    background: #A5D6A7;
+    background: #cdebcd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;

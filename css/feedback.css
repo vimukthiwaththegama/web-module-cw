@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+   font-size:1.2em ;
 }
 
 header {
@@ -30,7 +30,7 @@ fieldset {
     border: none;
     margin-bottom: 15px;
     padding: 10px;
-    background: #c0f7ca;
+    background: #c0ffba;
     border-radius: 5px;
 
 }
