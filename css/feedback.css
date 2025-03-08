@@ -1,8 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
 }
 
 header {
@@ -12,6 +9,7 @@ header {
     padding: 15px;
 }
 
+
 form {
     background: white;
     max-width: 600px;
@@ -19,6 +17,7 @@ form {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px #ccc;
+    margin-bottom: 180px;
 }
 
 .feedback-title {
