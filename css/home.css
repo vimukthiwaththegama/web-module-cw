@@ -34,6 +34,7 @@ body::before {
     left: 410px;
     padding: 40px;
     width: 1000px;
+    transition: 0.5s; 
    
 }
 
@@ -86,10 +87,11 @@ body::before {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 300px;
-    height: 100px;
+    height: 120px;
     text-align: center;
     padding: 20px;
     opacity: 75%;
+    transition: 0.5s;
 }
 
 .card:hover {
@@ -97,4 +99,14 @@ body::before {
     opacity: 100%;
     transform: scale(1.05);
     transition: 0.5s;
+}
+
+.card-container button{
+    background-color: #82ffc7;
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+}
+.card-container button:hover{
+    cursor: pointer;
 }

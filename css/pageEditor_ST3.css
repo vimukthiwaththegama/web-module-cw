@@ -1,9 +1,5 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #58f56f 0%, #d9e7ff 100%);
-    margin: 0;
-    padding: 20px;
-    color: #333;
 }
 
 header {
@@ -20,7 +16,7 @@ header {
 .page-editor-container {
     max-width: 900px;
     margin: 20px auto;
-    background: #87CEEB;
+    background: #e0ebf0;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
