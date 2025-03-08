@@ -17,7 +17,6 @@
 body {
   color: var(--text-dark);
   line-height: 1.6;
-  background-color: #f9f9f9;
 }
 
 .container {
@@ -50,7 +49,7 @@ header p {
 }
 
 .nav-container {
-  background-color: #fff;
+  background-color: #baf3b2;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 30px;
@@ -126,7 +125,8 @@ li {
 
 .image-container img {
   max-width: 100%;
-  height: auto;
+  height:30%;
+  width:60%;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border: 3px solid var(--light-green);
@@ -182,13 +182,6 @@ li {
   transform: translateY(-3px);
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-  color: #666;
-  font-size: 0.9rem;
-}
 
 @media (max-width: 768px) {
   .container {
