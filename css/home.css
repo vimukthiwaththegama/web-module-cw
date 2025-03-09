@@ -5,36 +5,30 @@ body {
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+    background-color: #00000091;
+    
 }
 
-body::before {
-    content: "";
+.image-container {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/images/body1-image.jpg');
-    background-attachment: fixed; 
-    background-size: cover; 
-    background-repeat: no-repeat;
-    opacity: 0.5; 
-    z-index: -1;
+    top: 350px;
+    right: 100px; 
+    transform: translateY(-50%); 
+    flex: auto;
+    z-index: -1; 
+    pointer-events: none;
 }
+
 
 .home-intro {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 36px;
     color: #1f3f31;
-    text-align-last: center;
+    text-align-last: left;
     padding: 30px;
     position: relative;
     top: 20px;
-    left: 410px;
+    left: 50px;
     padding: 40px;
     width: 1000px;
     transition: 0.5s; 
@@ -49,24 +43,27 @@ body::before {
     font-weight: bolder;
     flex: 1;
 }
+
 .desc{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 28px;
+    font-size: 18px;
     width: 800px;
-    text-align-last: center;
+    text-align-last: left;
     font-style: bold;
     align-self: auto;
     padding: 10px;
     position: relative;
-    top: 15px;
-    left: 200px;
+    left: 150px;
     padding: 40px;
-    width: 1500px;
+    width: 500px;
     color: rgb(0, 0, 0);
+    transition: 0.8s;
 }
 
 .desc:hover{
     cursor: pointer;
+    transform: scale(1.005);
+    transition: 0.3s;   
 }
 
 .wrapper {
@@ -105,12 +102,27 @@ body::before {
 }
 
 .card-container button{
-    background-color: #82ffc7;
-    border-radius: 10px;
-    height: 30px;
-    width: 100px;
+    background-color: #82ffc7ab;
+    border-radius: 50px;
+    top: 30px;
+    height: 40px;
+    width: 120px;
+    margin-top: 10px;
 }
 
 .card-container button:hover{
     cursor: pointer;
 }
+
+footer {
+    position: fixed; 
+}
+
+a{
+    color: rgb(255, 255, 255);
+}
+
+.card-container button a{
+        color: rgb(0, 0, 0);
+
+ }

@@ -13,7 +13,6 @@ body {
 
 .navbar {
     background-color:#2D6A4F;
-    ;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -25,6 +24,7 @@ body {
 
 .navbar h1 {
     font-size: 24px;
+    color: #2D6A4F;
     margin: 0;
     padding-left: 10px;
     font-family: 'Poppins', sans-serif;
@@ -51,7 +51,6 @@ body {
 .navbar a:hover {
     color: #333333;
     text-decoration: underline;
-
 }
 
 header {
@@ -97,17 +96,72 @@ a {
 }
 
 footer {
-    position: fixed;
+    position: relative; 
     width: 100%;
     height: 90px;
-    bottom: 0;
-    background-color: #2D6A4F3b;
-    opacity: 1;
+    background-color: #2d6a4f;
     color: white;
+    opacity: 0.3;
     text-align: center;
     padding: 10px 0;
+    margin-top: auto; 
+    flex-shrink: 0; 
+    top: 0%;
+    bottom: 0px;
+    transition: 0.4s;
 }
 
 .footer-text {
-    padding-top: 30px;
+    text-align: right;
+    margin-right: 40px;
+    padding-top: 5px;
+}
+
+footer:hover{
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.logo {
+    height: 70px; 
+    top: 50px;
+    width: auto; 
+    margin-right: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between; /* Aligning footer elements to both ends */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2D6A4F; 
+    color: white;
+    position: relative;
+    margin-top: auto; 
+}
+
+.footer-text {
+    text-align: left; 
+    margin-left: 40px;
+    padding-top: 5px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 40px;  /* Adding left margin for spacing */
+}
+.footer-list{
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 70px;
+}
+
+.footer-list a{
+    text-decoration: none;
+}
+.footer-list a:hover{
+    color: black;
 }
