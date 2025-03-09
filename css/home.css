@@ -27,7 +27,7 @@ body {
     text-align-last: left;
     padding: 30px;
     position: relative;
-    top: 20px;
+    top: 150px;
     left: 50px;
     padding: 40px;
     width: 1000px;
@@ -54,6 +54,7 @@ body {
     padding: 10px;
     position: relative;
     left: 150px;
+    top: 150px;
     padding: 40px;
     width: 500px;
     color: rgb(0, 0, 0);
