@@ -12,32 +12,36 @@
 
 </head>
 <body id="top">
-    <header class="navbar">
-        <div class="brand">
-            <h1><a href="/home.html">W</a></h1>
-            <h2><a href="/home.html">e</a></h2>
-            <h2><a href="/home.html">l</a></h2>
-            <h2><a href="/home.html">l</a></h2>
-            <h2><a href="/home.html">n</a></h2>
-            <h2><a href="/home.html">e</a></h2>
-            <h2><a href="/home.html">s</a></h2>
-            <h2><a href="/home.html">s</a></h2>
-            <h1><a href="/home.html">H</a></h1>
-            <h2><a href="/home.html">u</a></h2>
-            <h2><a href="/home.html">b</a></h2>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="/home.html">Home</a></li>
-                <li><a href="/pages/volunteer.html">Volunteer</a></li>
-                <li><a href="/pages/table.html">Table</a></li>
-                <li><a href="/pages/profile.html">User Profile</a></li>
-                <li><a href="/pages/feedback.html">Feedback</a></li>
-                <li><a href="/pages/site-map.html">Site Map</a></li>
-                <li><a href="/pages/team.html">Team</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="navbar-container">
+        <header class="navbar">
+            <div class="brand">
+                <a href="/home.html">
+                    <img src="/images/Adobe Express - file.png" alt="Wellness Hub Logo" class="logo">
+                </a>
+                <h1><a href="/home.html">W</a></h1>
+                <h2><a href="/home.html">e</a></h2>
+                <h2><a href="/home.html">l</a></h2>
+                <h2><a href="/home.html">l</a></h2>
+                <h2><a href="/home.html">n</a></h2>
+                <h2><a href="/home.html">e</a></h2>
+                <h2><a href="/home.html">s</a></h2>
+                <h2><a href="/home.html">s</a></h2>
+                <h1><a href="/home.html">H</a></h1>
+                <h2><a href="/home.html">u</a></h2>
+                <h2><a href="/home.html">b</a></h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/home.html">Home</a></li>
+                    <li><a href="/pages/volunteer.html">Volunteer</a></li>
+                    <li><a href="/pages/table.html">Table</a></li>
+                    <li><a href="/pages/profile.html">User Profile</a></li>
+                    <li><a href="/pages/feedback.html">Feedback</a></li>
+                    <li><a href="/pages/site-map.html">Site Map</a></li>
+                    <li><a href="/pages/team.html">Team</a></li>
+                </ul>
+            </nav>
+        </header>
 
     <section class="stud">
         <h2>Ashini Vidanapathirana, Student-3</h2>
@@ -55,7 +59,7 @@
                         <p>The feedback page incorporates accessibility principles to ensure usability for all visitors, including those using assistive technologies. Semantic structure is established through proper HTML elements (header, main, fieldset, legend) that create a logical document outline for screen readers. Form accessibility is implemented through explicit label associations with each form control and clear indication of required fields using both visual cues (asterisks) and the required attribute. The color scheme maintains sufficient contrast with dark text on light backgrounds for readability. Visual feedback for validation states helps users identify and correct errors through the invalid pseudo-class styling. Responsive design considerations are implemented through media queries that reorganize content for smaller screens, particularly adjusting the rating emoji layout and checkbox groups into column formats when viewed on mobile devices.</p>
                     
                     <h3>Link to the validation page</h3> 
-                        <p><a href="/validation/validation_ST3.html"> Feedback Validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+                        <p><a href="/validation/validation_ST3.html#feedbackVal"> Feedback Validation page</a>
 
                     <h3>Link to the page</h3>
                         <p><a href="/pages/feedback.html">Visit the Feedback Page</a></p>
@@ -70,7 +74,7 @@
                         <p>The team page implements several accessibility features to ensure inclusive user experience. The page structure includes proper heading hierarchy starting with the main h1 class="team-title" followed by appropriate subheadings. Images of team members include descriptive alt attributes (alt="Student 1") to provide context for screen reader users. Keyboard accessibility is enhanced through the tabindex="0" attribute on team member thumbnails, allowing focus navigation, complemented by a visible focus indicator (outline: 2px solid #851524) when elements are selected via keyboard. The page provides explicit instructions ("Hover over the images for details!!") to guide users on interaction expectations. Color contrast is maintained throughout the design with dark text on light backgrounds. The responsive layout implemented through CSS flexbox (display: flex; flex-wrap: wrap) ensures content remains accessible across different screen sizes. While the hover mechanism reveals additional information visually, the base information remains accessible to all users regardless of input method.</p>
 
                     <h3>Link to the validation page</h3> 
-                        <p><a href="validation_ST0.html#volunteerVal">Team Validation page</a>
+                        <p><a href="/validation/validation_ST3.html#teamVal">Team Validation page</a>
 
                         
                     <h3>Link to the page</h3>
@@ -86,7 +90,7 @@
                         <p>The content page demonstrates strong accessibility implementation through several key features. The page employs proper semantic structure with section elements, clearly identified headings (h2, h3, h4), and descriptive link text in the navigation. An ID-based navigation system (href="#understanding") with visible, high-contrast links enables users to quickly access specific content sections. Images include descriptive alt attributes and captions for context, ensuring non-visual users can understand the content. The color scheme is defined using CSS variables that maintain WCAG-compliant contrast ratios, particularly between text and background elements. User orientation is enhanced through visual indicators like section borders, background colors, and consistent styling patterns. The page includes a "back to top" button with a clear symbol (↑) that helps users navigate long content without excessive scrolling. The responsive design maintains readability across devices with adjusted typography and layout for smaller screens. Important information is highlighted visually (div class="highlight-box") while remaining accessible to screen readers through proper heading structure.</p>
 
                     <h3>Link to the validation page</h3> 
-                        <p><a href="validation_ST0.html#contentVal">Content Validation page</a>
+                        <p><a href="/validation/validation_ST3.html#contentVal">Content Validation page</a>
 
                         
                     <h3>Link to the page</h3>
@@ -107,14 +111,21 @@
 
             <section>
                 <h2 id="ref">References</h2>
-                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
-                    <ul class="ref">
-                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 11 Feb 2025).</li>
-                        <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc. Indianappolis.</i></li>
-                    </ul>
+                <p>Resources used in the creation of this page:</p>
+                <ul class="ref">
+                    <li>W3Schools (2024) <i>HTML Tutorial.</i> Available at: <a href="https://www.w3schools.com/html/">https://www.w3schools.com/html/</a> (Last accessed: 3 March 2025).</li>
+                    <li>W3Schools (2024) <i>CSS Tutorial.</i> Available at: <a href="https://www.w3schools.com/css/">https://www.w3schools.com/css/</a> (Last accessed: 6 March 2025).</li>
+                    <li>United Nations (2024) <i>Sustainable Development Goals.</i> Available at: <a href="https://sdgs.un.org/goals">https://sdgs.un.org/goals</a> (Last accessed: 20 February 2025).</li>
+                    <li>World Health Organization (2024) <i>WHO - World Health Organization.</i> Available at: <a href="https://www.who.int/">https://www.who.int/</a> (Last accessed: 28 February 2025).</li>
+                    <li>United Nations Department of Economic and Social Affairs (2024) <i>Health and Population.</i> Available at: <a href="https://www.un.org/development/desa/en/key-issues/population.html">https://www.un.org/development/desa/en/key-issues/population.html</a> (Last accessed: 9 March 2025).</li>
+                </ul>
             </section>
 
-            <p class="top"><a href="#top">Go top</a></p>
+
+            <div class="back-to-top">
+                <a href="#top"><i class="fas fa-arrow-up"></i> Back to Top</a>
+            </div>
+            
         </main>
 
         <!-- Sidebar area -->
@@ -138,7 +149,16 @@
     </div>
 
     <footer>
-        <p>Replace the footer with your teams' website footer</p>
+        <p class="footer-text">&copy; 2025 Wellness Hub. All Rights Reserved.</p>
+        <div class="footer-links">
+         <div class="footer-list">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="/validation/validation_ST3.html">Validator Page</a></li>
+                <li> <a href="/editor/pageEditor_ST3.html">Editor Page</a></li>
+            </ul>
+        </div>
+        </div>
     </footer>
 </body>
 </html>

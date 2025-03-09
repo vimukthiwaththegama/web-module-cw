@@ -6,7 +6,7 @@ body {
 
 
 .team-title{
-    margin-top: 35px;
+    margin-top: 150px;
     text-align: center;
     font-weight: 300;
 }
@@ -114,6 +114,7 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
+
 
 
 
