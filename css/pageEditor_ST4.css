@@ -1,0 +1,113 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, rgba(126, 187, 227, 0.411), #ffffffaf);
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    margin-top: 8rem !important;
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+    background: rgb(239, 240, 240);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(45, 106, 79, 0.1);
+}
+
+.header h1 {
+    color: #2D6A4F;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.header p {
+    color: #666666;
+    font-size: 1.1rem;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    gap: 20px;
+  }
+  .container a {
+    color: #2D6A4F;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .container a:hover {
+    color: #2D6A4F;
+    text-decoration: underline;
+  }
+  main {
+    flex: 3;
+  }
+  aside {
+    flex: 1;
+    background: #fbf9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  /* Section Styling */
+  section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fbfcfc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  h3 {
+    margin-top: 20px;
+    color: #2D6A4F;
+  }
+  /* Sidebar Navigation */
+  .top-level-ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .top-level-ul li {
+    margin-bottom: 12px;
+  }
+  aside a {
+    font-weight: 600;
+  }
+  /* "Go Top" Button */
+  .top {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+  }
+  .top a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #2D6A4F;
+    color: white;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .top a:hover {
+    background-color: #2D6A4F;
+    transform: translateY(-2px);
+  }
+  /* References List */
+  .ref {
+    list-style: none;
+    padding-left: 0;
+  }
+  .ref li {
+    margin-bottom: 10px;
+  }

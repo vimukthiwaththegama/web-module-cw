@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - Wellness Hub</title>
+    <link rel="stylesheet" href="./../css/global.css">
+    <link rel="stylesheet" href="./../css/volunteer.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">
+            <h1>W</h1><h2>ellness</h2>
+            <h1>H</h1><h2>ub</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/pages/volunteer.html" class="active">Volunteer</a></li>
+                <li><a href="/pages/table.html">Table</a></li>
+                <li><a href="/pages/profile.html">User Profile</a></li>
+                <li><a href="/pages/feedback.html">Feedback</a></li>
+                <li><a href="/pages/site-map.html">Site Map</a></li>
+                <li><a href="/pages/team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Volunteer Programs Section -->
+    <section class="volunteer-section">
+        <h2>Explore Volunteering Opportunities</h2>
+        
+        <div class="filter">
+            <label for="sort">Sort By:</label>
+            <select id="sort">
+                <option>Most Popular</option>
+                <option>Newest</option>
+                <option>Lowest Fee</option>
+            </select>
+        </div>
+
+        <div class="scrollable-container">
+            <div class="volunteer-card">
+                <img src="./../images/Awareness.webp" alt="Program 1">
+                <h3>Community Health Awareness</h3>
+                <p>Educate communities on mental and physical wellness.</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+            <div class="volunteer-card">
+                <img src="./../images/nutrition.jpeg" alt="Program 2">
+                <h3>Nutrition Support Program</h3>
+                <p>Help distribute healthy meals to underprivileged families.</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+            <div class="volunteer-card">
+                <img src="./../images/mental.jpg" alt="Program 3">
+                <h3>Mental Health Workshops</h3>
+                <p>Support mental health awareness initiatives.</p><br>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+            <div class="volunteer-card">
+                <img src="./../images/children.jpg" alt="Program 4">
+                <h3>Wellness for Children</h3>
+                <p>Engage in activities that promote children’s well-being.</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ratings & Reviews Section -->
+    <section class="reviews-section">
+        <h2>Volunteer Reviews</h2>
+        <div class="rating-summary">
+            <h3>9.4/10 Exceptional</h3>
+            <p>100+ reviews</p>
+        </div>
+
+        <div class="review-container">
+            <div class="review-card">
+                <h4>10/10 Excellent</h4>
+                <p>"A life-changing experience! Highly recommended."</p>
+                <a href="#">See More</a>
+                <p class="reviewer">- Daniela G, July 5, 2019</p>
+            </div>
+            <div class="review-card">
+                <h4>9/10 Great</h4>
+                <p>"Amazing team and well-organized programs!"</p>
+                <a href="#">See More</a>
+                <p class="reviewer">- Dr. Joan M, Aug 5, 2019</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Form -->
+    <section class="feedback-section">
+        <h2>Send us your review</h2>
+        <textarea placeholder="Write your review here..."></textarea>
+        
+        <div class="rating">
+            <span>😊</span><span>😃</span><span>😍</span><span>😐</span><span>😞</span>
+        </div>
+        
+        <div class="buttons">
+            <button class="submit-btn">Submit Feedback</button>
+            <button class="cancel-btn">Cancel</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Wellness Hub. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

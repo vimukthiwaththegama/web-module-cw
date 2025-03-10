@@ -3,165 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Map - LifePulse</title>
-    <link rel="stylesheet" href="/css/global.css">
+    <title>- Sitemap</title>
+    <link rel="stylesheet" href="./../css/global.css">
     <link rel="stylesheet" href="./../css/sitemap.css">
-    <script src="./../js/sitemap.js" defer></script>
+    
+
 </head>
 <body>
-    <div class="wrapper">
-        <div class="navbar-container">
-            <header class="navbar">
-                <div class="brand">
-                    <h1><a href="/home.html">W</a></h1>
-                    <h2><a href="/home.html">e</a></h2>
-                    <h2><a href="/home.html">l</a></h2>
-                    <h2><a href="/home.html">l</a></h2>
-                    <h2><a href="/home.html">n</a></h2>
-                    <h2><a href="/home.html">e</a></h2>
-                    <h2><a href="/home.html">s</a></h2>
-                    <h2><a href="/home.html">s</a></h2>
-                    <h1><a href="/home.html">H</a></h1>
-                    <h2><a href="/home.html">u</a></h2>
-                    <h2><a href="/home.html">b</a></h2>
-                </div>
-    
-                <nav>
-                    <ul>
-                        <li><a href="/home.html">Home</a></li>
-                        <li><a href="/pages/volunteer.html">Volunteer</a></li>
-                        <li><a href="/pages/table.html">Table</a></li>
-                        <li><a href="/pages/profile.html">User Profile</a></li>
-                        <li><a href="/pages/feedback.html">Feedback</a></li>
-                        <li><a href="/pages/site-map.html" class="active">Site Map</a></li>
-                        <li><a href="/pages/team.html">Team</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-
-        <main>
-            <section class="sitemap-container">
-                <div class="sitemap-card">
-                    <div class="sitemap-header">
-                        <h2>Site Map</h2>
-                        <p class="subtitle">Interactive visual representation of LifePulse website structure</p>
-                    </div>
-                    
-                    <!-- <div class="sitemap-intro">
-                        <p>This sitemap shows how all pages in the LifePulse website are connected. Hover over any page to see details, and click on a page to navigate directly to it. You can also use keyboard navigation (Tab key) to move between elements.</p>
-                    </div> -->
-                    
-                    <div class="sitemap-svg-container" role="navigation" aria-label="Website sitemap">
-                        <svg id="sitemap" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet">
-                            <!-- Home Node -->
-                            <g class="node home-node" tabindex="0" role="link" aria-label="Home page, main landing page">
-                                <a href="/home.html">
-                                    <rect x="450" y="50" width="100" height="50" rx="10" ry="10" class="node-shape"></rect>
-                                    <text x="500" y="80" class="node-text">Home</text>
-                                </a>
-                            </g>
-                            
-                            <!-- Main Level Connector Lines -->
-                            <line x1="500" y1="100" x2="500" y2="150" class="connector"></line>
-                            
-                            <!-- Main Hub Line -->
-                            <line x1="200" y1="150" x2="800" y2="150" class="connector"></line>
-                            
-                            <!-- Level 1 Vertical Connectors -->
-                            <line x1="200" y1="150" x2="200" y2="200" class="connector"></line>
-                            <line x1="350" y1="150" x2="350" y2="200" class="connector"></line>
-                            <line x1="500" y1="150" x2="500" y2="200" class="connector"></line>
-                            <line x1="650" y1="150" x2="650" y2="200" class="connector"></line>
-                            <line x1="800" y1="150" x2="800" y2="200" class="connector"></line>
-                            
-                            <!-- Volunteer Node -->
-                            <g class="node" tabindex="0" role="link" aria-label="Volunteer page, find volunteering opportunities">
-                                <a href="/pages//volunteer.html">
-                                    <rect x="150" y="200" width="100" height="50" rx="10" ry="10" class="node-shape"></rect>
-                                    <text x="200" y="230" class="node-text">Volunteer</text>
-                                </a>
-                            </g>
-                            
-                            <!-- User Profile Node -->
-                            <g class="node" tabindex="0" role="link" aria-label="User Profile page, personal information and settings">
-                                <a href="/pages//profile.html">
-                                    <rect x="300" y="200" width="100" height="50" rx="10" ry="10" class="node-shape"></rect>
-                                    <text x="350" y="230" class="node-text">User Profile</text>
-                                </a>
-                            </g>
-                            
-                            <!-- Feedback Node -->
-                            <g class="node" tabindex="0" role="link" aria-label="Feedback page, submit comments and suggestions">
-                                <a href="/pages//feedback.html">
-                                    <rect x="450" y="200" width="100" height="50" rx="10" ry="10" class="node-shape"></rect>
-                                    <text x="500" y="230" class="node-text">Feedback</text>
-                                </a>
-                            </g>
-                            
-                            <!-- Sitemap Node -->
-                            <g class="node" tabindex="0" role="link" aria-label="Site Map page, current page showing website structure">
-                                <a href="/pages//site-map.html">
-                                    <rect x="600" y="200" width="100" height="50" rx="10" ry="10" class="node-shape active-node"></rect>
-                                    <text x="650" y="230" class="node-text">Site Map</text>
-                                </a>
-                            </g>
-                            
-                            <!-- Team Node with Subnodes -->
-                            <g class="node" tabindex="0" role="link" aria-label="Team page, information about team members">
-                                <a href="/pages//team.html">
-                                    <rect x="750" y="200" width="100" height="50" rx="10" ry="10" class="node-shape"></rect>
-                                    <text x="800" y="230" class="node-text">Team</text>
-                                </a>
-                            </g>
-                            
-                            <!-- Team Member Subnodes -->
-                            <line x1="800" y1="250" x2="800" y2="280" class="connector"></line>
-                            <line x1="680" y1="280" x2="920" y2="280" class="connector"></line>
-                            
-                            <line x1="680" y1="280" x2="680" y2="330" class="connector"></line>
-                            <line x1="760" y1="280" x2="760" y2="330" class="connector"></line>
-                            <line x1="840" y1="280" x2="840" y2="330" class="connector"></line>
-                            <line x1="920" y1="280" x2="920" y2="330" class="connector"></line>
-                            
-                            <g class="node sub-node" tabindex="0" role="link" aria-label="Team Member 1 profile">
-                                <a href="/team-member1.html">
-                                    <rect x="640" y="330" width="80" height="40" rx="8" ry="8" class="node-shape"></rect>
-                                    <text x="680" y="355" class="node-text small">Member 1</text>
-                                </a>
-                            </g>
-                            
-                            <g class="node sub-node" tabindex="0" role="link" aria-label="Team Member 2 profile">
-                                <a href="./team-member2.html">
-                                    <rect x="720" y="330" width="80" height="40" rx="8" ry="8" class="node-shape"></rect>
-                                    <text x="760" y="355" class="node-text small">Member 2</text>
-                                </a>
-                            </g>
-                            
-                            <g class="node sub-node" tabindex="0" role="link" aria-label="Team Member 3 profile">
-                                <a href="./team-member3.html">
-                                    <rect x="800" y="330" width="80" height="40" rx="8" ry="8" class="node-shape"></rect>
-                                    <text x="840" y="355" class="node-text small">Member 3</text>
-                                </a>
-                            </g>
-                            
-                            <g class="node sub-node" tabindex="0" role="link" aria-label="Team Member 4 profile">
-                                <a href="./team-member4.html">
-                                    <rect x="880" y="330" width="80" height="40" rx="8" ry="8" class="node-shape"></rect>
-                                    <text x="920" y="355" class="node-text small">Member 4</text>
-                                </a>
-                            </g>
-                        </svg>
-                    </div>
-                    
-                </div>
-            </section>
-        </main>
+    <div class="navbar-container">
+        <header class="navbar">
+            <div class="brand">
+                <a href="/home.html">
+                    <img src="/images/Adobe Express - file.png" alt="Wellness Hub Logo" class="logo">
+                </a>
+                <h1><a href="/home.html">W</a></h1>
+                <h2><a href="/home.html">e</a></h2>
+                <h2><a href="/home.html">l</a></h2>
+                <h2><a href="/home.html">l</a></h2>
+                <h2><a href="/home.html">n</a></h2>
+                <h2><a href="/home.html">e</a></h2>
+                <h2><a href="/home.html">s</a></h2>
+                <h2><a href="/home.html">s</a></h2>
+                <h1><a href="/home.html">H</a></h1>
+                <h2><a href="/home.html">u</a></h2>
+                <h2><a href="/home.html">b</a></h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/home.html">Home</a></li>
+                    <li><a href="/pages/volunteer.html">Volunteer</a></li>
+                    <li><a href="/pages/table.html">Table</a></li>
+                    <li><a href="/pages/profile.html">User Profile</a></li>
+                    <li><a href="/pages/feedback.html">Feedback</a></li>
+                    <li><a href="/pages/site-map.html">Site Map</a></li>
+                    <li><a href="/pages/team.html">Team</a></li>
+                </ul>
+            </nav>
+        </header>
         
-       
+
+<h1 class="header">Website Sitemap</h1>
+<main id="content">
+    <div class="sitemap-container">
+        <svg viewBox="0 0 1530 800" preserveAspectRatio="xMidYMid meet">
+            <defs>
+                <marker
+                    id="arrowhead"
+                    markerWidth="10"
+                    markerHeight="7"
+                    refX="9"
+                    refY="3.5"
+                    orient="auto"
+                >
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+                </marker>
+            </defs>
+            
+            <!-- Connecting lines (placing lines before nodes so they appear behind) -->
+            <!-- Splash to Home -->
+            <line x1="765" y1="100" x2="765" y2="150" class="line"></line>
+            
+            <!-- Home to vertical line down -->
+            <line x1="765" y1="200" x2="765" y2="250" class="line"></line>
+            
+            <!-- Horizontal line from Home -->
+            <line id="none" x1="140" y1="250" x2="1390" y2="250" class="line"></line>
+            
+            <!-- Vertical connections to main pages -->
+            <line x1="140" y1="250" x2="140" y2="320" class="line"></line>
+            <line x1="390" y1="250" x2="390" y2="320" class="line"></line>
+            <line x1="640" y1="250" x2="640" y2="320" class="line"></line>
+            <line x1="890" y1="250" x2="890" y2="320" class="line"></line>
+            <line x1="1140" y1="250" x2="1140" y2="320" class="line"></line>
+            <line x1="1390" y1="250" x2="1390" y2="320" class="line"></line>
+            
+            <!-- Home to Content -->
+            <line x1="765" y1="250" x2="765" y2="400" class="line"></line>
+            
+            
+            <!-- Splash screen -->
+            <g id="groupId1">
+                <a href="../../pages/splash.html">
+                    <rect x="665" y="50" rx="10" ry="10" width="200" height="50"></rect>
+                    <text x="765" y="80">Splash screen</text>
+                </a>
+            </g>
+
+            <!-- Home Page -->
+            <g id="groupId2">
+                <a href="../../home.html">
+                    <rect x="665" y="150" rx="10" ry="10" width="200" height="50"></rect>
+                    <text x="765" y="180">Home Page</text>
+                </a>
+            </g>
+
+            <!-- Volunteer -->
+            <g id="groupId3">
+                <a href="../../pages/volunteer.html">
+                    <rect x="40" y="320" rx="10" ry="10" width="200" height="50"></rect>
+                    <text x="140" y="350">Volunteer</text>
+                </a>
+            </g>
+
+            <!-- Table -->
+            <g id="groupId4">
+                <a href="../../pages/table.html">
+                    <rect x="290" y="320" rx="10" ry="10" width="200" height="50"></rect>
+                    <text x="390" y="350">Table</text>
+                </a>
+            </g>
+
+            <!-- Profile -->
+            <g id="groupId5">
+                <a href="../../pages/profile.html">
+                    <rect x="540" y="320" rx="10" ry="10" width="200" height="50"></rect>
+                    <text x="640" y="350">User Profile</text>
+                </a>
+            </g>
+
+            <!-- Feedback -->
+            <g id="groupId6">
+                <a href="../../pages/feedback.html">
+                    <rect x="790" y="320" rx="10" ry="10" width="200" height="50"></rect>
+                    <text x="890" y="350">Feedback</text>
+                </a>
+            </g>
+
+            <!-- sitemap -->
+            <g id="groupId7">
+                <a href="../../pages/site-map.html">
+                    <rect x="1040" y="320" rx="10" ry="10" width="200" height="50"></rect>
+                    <text x="1140" y="350">Sitemap</text>
+                </a>
+            </g>
+
+            <!-- Team -->
+            <g id="groupId13">
+                <a href="../../pages/team.html">
+                    <rect x="1290" y="320" rx="10" ry="10" width="200" height="50"></rect>
+                    <text x="1390" y="350">Team</text>
+                </a>
+            </g>
+
+            <!-- Content Group -->
+            <g id="groupId8">
+                <rect x="545" y="400" rx="10" ry="10" width="450" height="380" fill="rgba(255, 255, 255, 0.8)" stroke="var(--secondary-color)" stroke-width="1.5"></rect>
+                <text x="765" y="420" text-anchor="middle" font-family="Poppins, sans-serif" font-size="22" font-weight="600" fill="var(--text-color)">Content</text>
+            </g>
+
+            <!-- Wellness for Children -->
+            <g id="groupId9">
+                <a href="../../content/content_ST1.html">
+                    <rect x="655" y="450" rx="10" ry="10" width="220" height="50"></rect>
+                    <text x="765" y="480">Wellness for Children </text>
+                </a>
+            </g>
+
+            <!-- Nutrition & Fitness -->
+            <g id="groupId10">
+                <a href="../../content/content_ST2.html">
+                    <rect x="655" y="530" rx="10" ry="10" width="220" height="50"></rect>
+                    <text x="765" y="560">Nutrition & Fitness</text>
+                </a>
+            </g>
+
+            <!-- Mental Health and Well-being -->
+            <g id="groupId11">
+                <a href="../../content/content_ST3.html">
+                    <rect x="655" y="610" rx="10" ry="10" width="220" height="50"></rect>
+                    <text x="765" y="640">Mental Health and Well-being</text>
+                </a>
+            </g>
+
+            <!-- Healthcare Access and disease Prevention -->
+            <g id="groupId12">
+                <a href="../../content/content_ST4.html">
+                    <rect x="590" y="690" rx="10" ry="10" width="350" height="50"></rect>
+                    <text x="765" y="720">Healthcare Access and disease Prevention</text>
+                </a>
+            </g>
+        </svg>
     </div>
-    <footer>
-        <p class="footer-text">&copy; 2025 Life Pulse. All Rights Reserved.</p>
+</main>
+<footer>
+        <p class="footer-text">&copy; 2025 Wellness Hub. All Rights Reserved.</p>
+        <div class="footer-links">
+            <div class="footer-list">
+                <h2>Links</h2>
+                <ul>
+                    <li><a href="/validation/validation_ST4.html#sitemapVal">Validator Page</a></li>
+                    <li><a href="/editor/pageEditor_ST4.html#sitemap-page">Editor Page</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
+  </div>
+  <script src="../js/sitemap.js"></script>
+
 </body>
+
 </html>
