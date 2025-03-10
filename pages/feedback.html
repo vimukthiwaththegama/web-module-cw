@@ -7,43 +7,45 @@
     <title>Feedback</title>
     <link rel="stylesheet" href="/css/feedback.css">
     <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="brand">
-            <h1><a href="/home.html">W</a></h1>
-            <h2><a href="/home.html">e</a></h2>
-            <h2><a href="/home.html">l</a></h2>
-            <h2><a href="/home.html">l</a></h2>
-            <h2><a href="/home.html">n</a></h2>
-            <h2><a href="/home.html">e</a></h2>
-            <h2><a href="/home.html">s</a></h2>
-            <h2><a href="/home.html">s</a></h2>
-            <h1><a href="/home.html">H</a></h1>
-            <h2><a href="/home.html">u</a></h2>
-            <h2><a href="/home.html">b</a></h2>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="/home.html">Home</a></li>
-                <li><a href="/pages/volunteer.html">Volunteer</a></li>
-                <li><a href="/pages/table.html">Table</a></li>
-                <li><a href="/pages/profile.html">User Profile</a></li>
-                <li><a href="/pages/feedback.html">Feedback</a></li>
-                <li><a href="/pages/site-map.html">Site Map</a></li>
-                <li><a href="/pages/team.html">Team</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <div class="navbar-container">
+        <header class="navbar">
+            <div class="brand">
+                <a href="/home.html">
+                    <img src="/images/Adobe Express - file.png" alt="Wellness Hub Logo" class="logo">
+                </a>
+                <h1><a href="/home.html">W</a></h1>
+                <h2><a href="/home.html">e</a></h2>
+                <h2><a href="/home.html">l</a></h2>
+                <h2><a href="/home.html">l</a></h2>
+                <h2><a href="/home.html">n</a></h2>
+                <h2><a href="/home.html">e</a></h2>
+                <h2><a href="/home.html">s</a></h2>
+                <h2><a href="/home.html">s</a></h2>
+                <h1><a href="/home.html">H</a></h1>
+                <h2><a href="/home.html">u</a></h2>
+                <h2><a href="/home.html">b</a></h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/home.html">Home</a></li>
+                    <li><a href="/pages/volunteer.html">Volunteer</a></li>
+                    <li><a href="/pages/table.html">Table</a></li>
+                    <li><a href="/pages/profile.html">User Profile</a></li>
+                    <li><a href="/pages/feedback.html">Feedback</a></li>
+                    <li><a href="/pages/site-map.html">Site Map</a></li>
+                    <li><a href="/pages/team.html">Team</a></li>
+                </ul>
+            </nav>
+        </header>
     <main>
         <form id="feedbackForm" action="mailto:ashini.vidana@gmail.com">  
             <div class="feedback-title">
                 <h1 id="feedback-maintitle">FEEDBACK</h1><br>
-                <h3 id="feedback-subtitle">Your feedback helps us improve!!</h3><br>
+                <h3 id="feedback-subtitle">Your feedback helps us to improve!!</h3><br>
             </div>
 
             <fieldset>
@@ -130,7 +132,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="topics"><b>What topics interest you?</b></label>
+                    <label for="topics"><b>What topics would you like to know the most about?</b></label>
                     <select id="topics" name="topics" multiple size="4">
                         <option value="nutrition">Nutrition</option>
                         <option value="fitness">Fitness</option>
@@ -176,6 +178,7 @@
             </div>
         </form>
 
+
         <!-- Modal for successful submission -->
         <div id="feedback-modal-container" class="feedback-modal-container">
             <div class="modal-content">
@@ -198,56 +201,21 @@
         </div>
     </main>
 
-
-
-    <script>
+    <footer>
+        <p class="footer-text">&copy; 2025 Wellness Hub. All Rights Reserved.</p>
+        <div class="footer-links">
+         <div class="footer-list">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="/validation/validation_ST3.html">Validator Page</a></li>
+                <li> <a href="/editor/pageEditor_ST3.html">Editor Page</a></li>
+            </ul>
+        </div>
+        </div>
         
-        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
-            event.preventDefault(); 
+    </footer>
 
-            // Collect form data
-            let fullName = document.getElementById("fullName").value;
-            let email = document.getElementById("email").value;
-            let firstTime = document.querySelector("input[name='firstTime']:checked").value;
-            let findMethod = document.getElementById("findMethod").value;
-            let recommend = document.querySelector("input[name='recommend']:checked").value;
-
-            let formData = `Full Name: ${fullName}\nEmail: ${email}\nFirst Time: ${firstTime}\nFind Method: ${findMethod}\nRecommend: ${recommend}`;
-
-            // Send email using mailto
-            window.location.href = `mailto:ashini.vidana@gmail.com?subject=Feedback Submission&body=${encodeURIComponent(formData)}`;
-
-            // Show success message
-            document.getElementById("feedback-modal-container").style.display = "block";
-        });
-
-        // Close modal
-        document.getElementById("feedback-close-icon").addEventListener("click", function() {
-            document.getElementById("feedback-modal-container").style.display = "none";
-        });
-
-        function setRating(rating) {
-            let emojis = document.querySelectorAll(".emoji");
-            emojis.forEach((emoji, index) => {
-                emoji.classList.remove("selected");
-                if (index === rating - 1) {
-                    emoji.classList.add("selected");
-                }
-            });
-        }
-
-        function updateCharCount(textareaId, counterId, maxLength) {
-              let textarea = document.getElementById(textareaId);
-              let counter = document.getElementById(counterId);
-              counter.textContent = maxLength - textarea.value.length;
-        }
-
-    </script>
+    <script src="/js/feedback.js"></script>
 </body>
 </html>
-
-
-            </fieldset>
-        </form>
-    </main>
 
