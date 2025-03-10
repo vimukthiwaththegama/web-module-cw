@@ -1,20 +1,35 @@
 document.getElementById("feedbackForm").addEventListener("submit", function(event) {
     event.preventDefault(); 
 
+    // Show success message
+    document.getElementById("feedback-modal-container").style.display = "block";
+
     // Collect form data
     let fullName = document.getElementById("fullName").value;
     let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let address = document.getElementById("address").value;
     let firstTime = document.querySelector("input[name='firstTime']:checked").value;
     let findMethod = document.getElementById("findMethod").value;
     let recommend = document.querySelector("input[name='recommend']:checked").value;
+    
+    // Get additional form data that might be available
+    let drawbacks = document.getElementById("drawbacks").value || "Not provided";
+    let navigate = document.querySelector("input[name='navigate']:checked")?.value || "Not selected";
+    
+    // Build email body
+    let formData = `Full Name: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nAddress: ${address}\nFirst Time: ${firstTime}\nFind Method: ${findMethod}\nRecommend: ${recommend}\nDrawbacks: ${drawbacks}\nEasy to Navigate: ${navigate}`;
+    
+    // Create mailto URL
+    let mailtoUrl = `mailto:ashini.vidana@gmail.com?subject=Feedback Submission&body=${encodeURIComponent(formData)}`;
 
-    let formData = `Full Name: ${fullName}\nEmail: ${email}\nFirst Time: ${firstTime}\nFind Method: ${findMethod}\nRecommend: ${recommend}`;
 
-    // Send email using mailto
-    window.location.href = `mailto:ashini.vidana@gmail.com?subject=Feedback Submission&body=${encodeURIComponent(formData)}`;
+    // Delay the mailto redirect to allow modal to be seen
+    setTimeout(function() {
+        window.location.href = mailtoUrl;
+    }, 2000); // 2 second delay before opening email client
 
-    // Show success message
-    document.getElementById("feedback-modal-container").style.display = "block";
+    alert("Submission Successful!!  Thank You for Your Valuable Time.")
 });
 
 // Close modal
